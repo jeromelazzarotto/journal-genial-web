@@ -3,52 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal GenIA-L - Journal Généré par IA</title>
-    <!-- Tailwind CSS pour un design propre et rapide -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Journal GenIA-L — L'IA au service des instis de maternelle en FWB</title>
+    <!-- Integration de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-amber-50/30 text-slate-800 antialiased">
 
-    <!-- En-tête / Hero Section -->
-    <main class="flex-grow flex items-center justify-center px-4 py-16">
-        <div class="max-w-xl w-full text-center bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-slate-200">
-            
-            <!-- Badge ou Logo minimaliste -->
-            <span class="inline-block bg-indigo-50 text-indigo-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-6">
-                Bientôt disponible
+    <!-- NAVIGATION -->
+    <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <span class="text-2xl font-black text-indigo-900 tracking-tight">Journal <span class="text-amber-500">GenIA-L</span></span>
+            <span class="hidden sm:inline-block bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full border border-indigo-100">
+                100% Maternelle FWB 🇧🇪
             </span>
-
-            <!-- Nom marketing exact -->
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-3">
-                Journal GenIA-L
-            </h1>
-
-            <!-- Sous-titre -->
-            <p class="text-lg font-medium text-indigo-600 mb-6">
-                Journal Généré par IA
-            </p>
-
-            <!-- Texte descriptif court -->
-            <p class="text-slate-600 text-sm sm:text-base mb-8 leading-relaxed">
-                Simplifiez la gestion et l'écriture de vos préparations et de votre journal de classe grâce à la puissance de l'intelligence artificielle.
-            </p>
-
-            <!-- Boutons d'action (Liens Google Play & Support) -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center bg-slate-900 text-white hover:bg-slate-800 text-sm font-semibold px-5 py-3 rounded-xl transition shadow-sm">
-                    Télécharger sur Google Play
-                </a>
-                <a href="mailto:support@journalgenial.be" class="w-full sm:w-auto inline-flex items-center justify-center bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 text-sm font-semibold px-5 py-3 rounded-xl transition">
-                    Contactez le Support
-                </a>
-            </div>
-            
         </div>
-    </main>
+        <a href="#inscription" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm px-5 py-2.5 rounded-full transition duration-200 shadow-md shadow-indigo-200">
+            Tester gratuitement
+        </a>
+    </header>
 
-    <!-- Pied de page -->
-    <footer class="py-6 text-center text-xs text-slate-400">
-        &copy; 2026 Journal GenIA-L. Tous droits réservés.
+    <!-- HERO SECTION -->
+    <section class="max-w-5xl mx-auto px-6 pt-12 pb-16 text-center">
+        <div class="inline-flex items-center gap-2 bg-amber-100/80 text-amber-800 text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+            <span>✨ L'assistant intelligent du Référentiel FWB</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            Moins de paperasse,<br class="hidden sm:block">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-500">plus de magie</span> en classe.
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Le premier assistant IA pensé exclusivement pour les enseignant(e)s de maternelle en Belgique. Créez vos préparations, complétez votre journal de classe et suivez le référentiel FWB en quelques clics.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <a href="#inscription" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg px-8 py-4 rounded-full transition duration-200 shadow-lg shadow-amber-500/25">
+                Essayer Journal GenIA-L ✨
+            </a>
+        </div>
+        <p class="text-xs text-slate-400 flex items-center justify-center gap-4">
+            <span>🔒 Conforme RGPD</span> • <span>🤝 Prépas anonymisées</span> • <span>🇧🇪 Référentiel FWB 2026</span>
+        </p>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-slate-900 mb-4">Conçu pour la vraie vie d'une classe de maternelle</h2>
+            <p class="text-slate-600">Ne passez plus vos dimanches soir à encoder vos fiches et aligner les compétences.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-amber-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🎯</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Référentiel FWB Intégré</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    L'IA associe automatiquement vos ateliers aux attendus et compétences du Référentiel. Repérez immédiatement les domaines non abordés.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-indigo-100 rounded-2xl flex items-center justify-center text-2xl mb-6">📝</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Journal & Prépas en 2 min</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Dictez vos idées d'ateliers. GenIA-L génère une préparation structurée, claire et prête à imprimer ou à présenter aux inspecteurs.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-2xl mb-6">📊</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Suivi & Évaluation</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Prenez des notes rapides au fil de la journée. L'IA regroupe vos observations pour rédiger des bilans bienveillants pour les familles.
+                </p>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition">
+                <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center text-2xl mb-6">🤝</div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">Salle des Profs Virtuelle</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Échangez vos fiches de préparation avec les institutrices et instituteurs de Belgique. Partage 100% anonymisé et sécurisé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIAL / TRUST BANNER -->
+    <section class="max-w-4xl mx-auto px-6 py-12">
+        <div class="bg-indigo-900 text-white p-8 md:p-12 rounded-3xl relative overflow-hidden shadow-xl">
+            <div class="relative z-10">
+                <p class="text-lg md:text-xl font-medium italic mb-6 leading-relaxed">
+                    « J'ai retrouvé mes dimanches après-midi ! Générer mes prépas en lien direct avec le Référentiel FWB me prend 3 fois moins de temps. L'outil comprend la réalité du terrain en maternelle. »
+                </p>
+                <div class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full bg-amber-400 text-indigo-950 font-bold flex items-center justify-center">S</div>
+                    <div>
+                        <p class="font-bold text-sm">Sophie M.</p>
+                        <p class="text-xs text-indigo-200">Institutrice maternelle (M2/M3) — Namur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section id="inscription" class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <div class="bg-amber-50 border border-amber-200/60 p-12 rounded-3xl">
+            <h2 class="text-3xl font-extrabold text-slate-900 mb-4">Prêt(e) à rendre votre quotidien GenIA-L ?</h2>
+            <p class="text-slate-600 max-w-xl mx-auto mb-8">Rejoignez les enseignants de maternelle qui réinventent leur préparation de classe dès aujourd'hui.</p>
+            <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-lg px-8 py-4 rounded-full transition duration-200 shadow-lg shadow-indigo-600/20">
+                Créer mon compte gratuit 🚀
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-8 text-xs text-slate-400 border-t border-slate-200/60">
+        <p>© 2026 Journal GenIA-L — Conçu pour les enseignants en Fédération Wallonie-Bruxelles.</p>
     </footer>
 
 </body>
