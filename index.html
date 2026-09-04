@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossier Complet & Landing Page — Journal GenIA-L (Maternelle FWB)</title>
+    <title>Journal GenIA-L — L'assistant parfait pour les instits maternels (FWB, Belgique)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAF8F5; }
-        .font-brand { font-family: 'Fredoka', cursive; }
         .blob-amber { position: absolute; top: 0%; left: 10%; width: 650px; height: 650px; background: rgba(251, 191, 36, 0.20); filter: blur(140px); border-radius: 50%; z-index: 0; }
         .blob-indigo { position: absolute; top: 30%; right: 0%; width: 700px; height: 700px; background: rgba(99, 102, 241, 0.15); filter: blur(150px); border-radius: 50%; z-index: 0; }
         .blob-rose { position: absolute; top: 65%; left: -5%; width: 600px; height: 600px; background: rgba(244, 63, 94, 0.12); filter: blur(140px); border-radius: 50%; z-index: 0; }
@@ -16,261 +15,292 @@
 </head>
 <body class="text-slate-900 antialiased relative overflow-x-hidden">
 
-    <div class="blob-amber"></div>
-    <div class="blob-indigo"></div>
-    <div class="blob-rose"></div>
+<div class="blob-amber"></div>
+<div class="blob-indigo"></div>
+<div class="blob-rose"></div>
 
-    <!-- BANNIÈRE EN-TÊTE -->
-    <div class="relative z-20 bg-indigo-950 text-white py-3 px-4 text-center text-xs font-semibold flex items-center justify-center gap-2 shadow-md">
-        <span class="bg-amber-400 text-indigo-950 text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">Dossier Pédagogique & Application Maternelle FWB 🇧🇪</span>
-        <span class="hidden sm:inline">• Alignement Référentiel des Compétences FWB (2026)</span>
+<!-- BANNIÈRE EN-TÊTE -->
+<div class="relative z-20 bg-indigo-950 text-white py-3 px-4 text-center text-xs font-semibold flex items-center justify-center gap-2 shadow-md">
+    <span class="bg-amber-400 text-indigo-950 text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">Application Maternelle FWB 🇧🇪</span>
+    <span class="hidden sm:inline">• Journal de classe Généré par IA</span>
+</div>
+
+<!-- NAVIGATION AVEC LOGO BRANDÉ SUR FOND BLANC -->
+<header class="relative z-10 max-w-7xl mx-auto px-6 py-4 flex items-center justify-between border-b border-slate-200/60">
+    <div class="flex items-center gap-4">
+        <div class="bg-white px-3 py-2 rounded-xl shadow-sm border border-slate-100 flex items-center">
+            <img src="img/brand.png" alt="Journal GenIA-L" class="h-8 sm:h-9 object-contain">
+        </div>
+        <div class="hidden sm:block">
+            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Journal de classe Généré par IA</p>
+        </div>
     </div>
 
-    <!-- NAVIGATION AVEC LOGO -->
-    <header class="relative z-10 max-w-7xl mx-auto px-6 py-5 flex items-center justify-between border-b border-slate-200/60">
-        <div class="flex items-center gap-4">
-            <!-- LOGO HEADER -->
-            <img src="logo.png" alt="Logo Journal GenIA-L" class="w-12 h-12 object-contain rounded-xl shadow-md">
-            <div>
-                <span class="text-2xl sm:text-3xl font-black text-indigo-950 font-brand tracking-tight">Journal <span class="text-amber-500">GenIA-L</span></span>
-                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">L'Assistant IA Magique des Enseignants de Maternelle</p>
+    <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600 uppercase tracking-wider">
+        <a href="#presentation" class="hover:text-indigo-600 transition">Présentation</a>
+        <a href="#fonctionnalites" class="hover:text-indigo-600 transition">Fonctionnalités</a>
+        <a href="#miracle" class="hover:text-indigo-600 transition">Mode Miracle</a>
+        <a href="#temoignages" class="hover:text-indigo-600 transition">Témoignages</a>
+        <a href="#telecharger" class="hover:text-indigo-600 transition">Télécharger</a>
+    </nav>
+
+    <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-5 py-3 rounded-2xl shadow-md transition">
+        Installer l'App 📲
+    </a>
+</header>
+
+<!-- HERO SECTION AVEC BANNIÈRE -->
+<section class="relative z-10 max-w-7xl mx-auto px-6 pt-10 pb-16">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+        <div class="lg:col-span-6 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-black px-4 py-1.5 rounded-full mb-6 shadow-sm">
+                <span>✨ L'assistant parfait pour les instits maternels (Fédération Wallonie-Bruxelles, Belgique)</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6">
+                Simplifiez votre quotidien,
+            </h1>
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6">
+                gardez vos soirées.
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                Conçu par et pour les enseignants du maternel en FWB. Finies les heures interminables le soir ou le week-end : centralisez la gestion de votre classe au creux de votre main avec le <b>meilleur des assistants</b>.
+            </p>
+
+            <!-- Boutons d'action principaux -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+                <a href="#telecharger" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition">
+                    <span>📲</span> Télécharger sur Android
+                </a>
+                <a href="https://journalgenial.be/tutoriels/tuto-01-introduction.mp4" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-indigo-950 font-bold px-6 py-3.5 rounded-2xl border border-slate-200 shadow-md transition">
+                    <span>▶️</span> Voir la démo vidéo
+                </a>
             </div>
         </div>
 
-        <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600 uppercase tracking-wider">
-            <a href="#dossier" class="hover:text-indigo-600 transition">Dossier Pédagogique</a>
-            <a href="#miracle" class="hover:text-indigo-600 transition">Mode Miracle</a>
-            <a href="#temoignages" class="hover:text-indigo-600 transition">Témoignages</a>
-            <a href="#telecharger" class="hover:text-indigo-600 transition">Télécharger</a>
-        </nav>
-
-        <a href="https://play.google.com/store" target="_blank" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-5 py-3 rounded-2xl shadow-md transition">
-            Installer l'App 📲
-        </a>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="relative z-10 max-w-7xl mx-auto px-6 pt-12 pb-16">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            
-            <div class="lg:col-span-7 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-300 text-emerald-900 text-xs font-black px-4 py-1.5 rounded-full mb-6 shadow-sm">
-                    <span>✨ "C'est un miracle absolu pour mes fins de semaine." — Claire M.</span>
+        <!-- VISUEL BANNER INTÉGRÉ -->
+        <div class="lg:col-span-6 flex justify-center">
+            <div class="relative w-full max-w-xl">
+                <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 via-indigo-500 to-sky-400 rounded-3xl opacity-30 blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                    <img src="img/banner.png" alt="Journal GenIA-L - L'assistant idéal des instits du maternel FWB" class="w-full h-auto object-cover">
                 </div>
-                
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.15] mb-6">
-                    Ne gâchez plus vos dimanches.<br>
-                    <span class="bg-gradient-to-r from-amber-500 via-orange-500 to-indigo-600 bg-clip-text text-transparent">Passez en mode miracle dans votre classe.</span>
-                </h1>
-                
-                <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                    Rédiger un journal de classe conforme FWB, structurer des fiches d'ateliers différenciées et évaluer les compétences de vos élèves sans y passer des nuits : <strong>Journal GenIA-L</strong> s'occupe de tout grâce à l'intelligence artificielle vocale.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ -->
+<section id="presentation" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-8">
+        <div class="max-w-3xl">
+            <span class="bg-indigo-100 text-indigo-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Présentation</span>
+            <h2 class="text-3xl font-black text-slate-900 mt-2 mb-4">L'application indispensable pour l'enseignement maternel en Belgique francophone</h2>
+            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Journal GenIA-L combine la puissance de l'intelligence artificielle et une ergonomie fluide pour accélérer vos journaux de classe, vos préparations, vos évaluations d'élèves sur smartphone ou tablette. Pensé pour s'adapter aux réalités administratives et pédagogiques de la FWB (Référentiel), c'est un véritable assistant au quotidien qui vous laisse vous concentrer sur l'essentiel : les apprentissages et les élèves.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 pt-4 border-t border-slate-100">
+            <div class="space-y-3">
+                <h3 class="font-bold text-indigo-950 text-lg flex items-center gap-2">
+                    <span>🔒</span> Respect total de la vie privée
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Vos données pédagogiques vous appartiennent. Tout est stocké sur votre appareil, avec une option de sauvegarde et de synchronisation sécurisée sur votre propre Google Drive personnel. Aucun partage avec des tiers, aucune exploitation commerciale de vos données.
                 </p>
-
-                <div class="p-6 bg-white rounded-3xl border border-slate-200 shadow-xl max-w-md mx-auto lg:mx-0 flex items-center gap-5">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://play.google.com/store" alt="QR Code Google Play" class="w-24 h-24 p-1.5 bg-white rounded-2xl border border-slate-200 shadow-inner">
-                    <div class="text-left">
-                        <span class="bg-amber-100 text-amber-900 text-[10px] font-extrabold px-2.5 py-0.5 rounded-md uppercase tracking-wider">Téléchargement Android</span>
-                        <h4 class="font-bold text-slate-900 text-sm mt-1">Scannez pour tester l'App</h4>
-                        <p class="text-xs text-slate-500 mt-0.5">Accès immédiat sur Google Play Store pour institutrices & instituteurs FWB.</p>
-                    </div>
-                </div>
             </div>
-
-            <!-- LOGO CENTRAL AVEC VOTRE IMAGE -->
-            <div class="lg:col-span-5 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-r from-sky-400 via-indigo-500 to-amber-400 rounded-3xl opacity-30 blur-2xl"></div>
-                    <div class="relative p-2 bg-indigo-950 rounded-3xl shadow-2xl border border-indigo-800">
-                        <!-- VOTRE VRAIE IMAGE -->
-                        <img src="logo.png" alt="Journal GenIA-L Édition Maternelle FWB" class="w-80 h-80 sm:w-96 sm:h-96 object-contain rounded-2xl shadow-lg">
-                    </div>
-                </div>
+            <div class="space-y-3">
+                <h3 class="font-bold text-indigo-950 text-lg flex items-center gap-2">
+                    <span>🇧🇪</span> Ancrage FWB et Référentiel
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    L'outil est conçu en Belgique et pour vous, en tenant compte de vos besoins en classes maternelles (accueil, M1, M2, M3) et des exigences de suivi des apprentissages et codification des compétences.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- DOSSIER TECHNIQUE ET PÉDAGOGIQUE -->
-    <section id="dossier" class="relative z-10 max-w-7xl mx-auto px-6 py-16">
-        <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm">
-            <div class="border-b border-slate-200 pb-8 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<!-- FONCTIONNALITÉS PRINCIPALES -->
+<section id="fonctionnalites" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fonctionnalités Principales</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4">Tout ce dont un instituteur de maternelle a besoin</h2>
+        <p class="text-slate-600 text-sm">Des outils puissants conçus pour réduire radicalement votre charge administrative.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-amber-100 text-amber-900 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">📝</div>
+                <h3 class="font-black text-slate-900 text-lg mb-3">Préparations & Journaliers</h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Préparations rédigées suite à une dictée ou saisie assistée, retravaillées par IA et alignées FWB. Génération automatique des semainiers, rapide et accessible même dans l'effervescence de la classe.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-indigo-100 text-indigo-900 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">✨</div>
+                <h3 class="font-black text-slate-900 text-lg mb-3">Assistant IA Intégré</h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Un doute sur une compétence, un attendu ? En quête d'une idée d'activité originale ? Sollicitez l'intelligence artificielle pour générer ou modifier vos préparations et obtenir des suggestions instantanées.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-900 rounded-2xl flex items-center justify-center text-xl font-bold mb-6">📊</div>
+                <h3 class="font-black text-slate-900 text-lg mb-3">Suivi des Élèves & Partage</h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Suivi des compétences, rapports d'évaluation basés sur vos notes et photos capturées. Proposez anonymement vos préparations et récupérez celles de la communauté.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION AVANT / APRÈS (MODE MIRACLE) -->
+<section id="miracle" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Le Vrai Changement de Vie</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4">La vie en "Mode Miracle" pour l'enseignant de maternelle</h2>
+        <p class="text-slate-600 text-sm">Découvrez des exemples concrets de situations vécues avant et après l'adoption de Journal GenIA-L.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- AVANT -->
+        <div class="bg-rose-50/70 p-8 rounded-3xl border-2 border-rose-200">
+            <div class="inline-block bg-rose-200 text-rose-950 text-xs font-black px-3 py-1 rounded-full mb-6">❌ AVANT : LA SURCHARGE ADMINISTRATIVE</div>
+            <div class="space-y-6">
+                <div class="border-b border-rose-200/80 pb-4">
+                    <p class="font-bold text-rose-900 text-xs uppercase tracking-wider mb-1">Le Dimanche à 19h00 :</p>
+                    <p class="text-xs sm:text-sm text-slate-700 italic">"Je passe mes dimanches à recopier des fiches de prépa et à chercher quel code du Référentiel FWB correspond à mon atelier..."</p>
+                </div>
                 <div>
-                    <span class="bg-indigo-100 text-indigo-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Dossier de Présentation Pédagogique</span>
-                    <h2 class="text-3xl font-black text-slate-900 mt-2">Spécifications & Cadre d'Application</h2>
-                </div>
-                <div class="text-right text-xs text-slate-500">
-                    <p>Document Référentiel FWB</p>
-                    <p class="font-bold text-slate-800">Version 2026.4 — Section Maternelle</p>
-                </div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 text-sm">
-                <div class="space-y-3">
-                    <div class="w-10 h-10 bg-amber-100 text-amber-900 font-bold rounded-xl flex items-center justify-center text-lg">01</div>
-                    <h3 class="font-black text-slate-900 text-base">Conformité au Référentiel FWB</h3>
-                    <p class="text-slate-600 leading-relaxed text-xs">
-                        Intégration native de l'ensemble des domaines du Référentiel des Compétences Maternelle en Fédération Wallonie-Bruxelles (Autonomie, Motricité, Langage, Éveil scientifique et artistique). Chaque fiche générée comporte automatiquement les codes officiels.
-                    </p>
-                </div>
-
-                <div class="space-y-3">
-                    <div class="w-10 h-10 bg-indigo-100 text-indigo-900 font-bold rounded-xl flex items-center justify-center text-lg">02</div>
-                    <h3 class="font-black text-slate-900 text-base">Traitement IA & Dictée Vocale</h3>
-                    <p class="text-slate-600 leading-relaxed text-xs">
-                        L'algorithme IA a été entraîné spécifiquement sur les besoins du cycle 2.5 - 6 ans. L'instituteur ou l'institutrice dicte librement ses observations de fin de journée, et l'application reformule le tout sous forme de bilan pédagogique clair.
-                    </p>
-                </div>
-
-                <div class="space-y-3">
-                    <div class="w-10 h-10 bg-emerald-100 text-emerald-900 font-bold rounded-xl flex items-center justify-center text-lg">03</div>
-                    <h3 class="font-black text-slate-900 text-base">Différenciation et Inclusion</h3>
-                    <p class="text-slate-600 leading-relaxed text-xs">
-                        Propose automatiquement des variantes simplifiées ou approfondies pour chaque atelier (accueil, M1, M2, M3), facilitant la prise en charge des besoins spécifiques au sein de classes verticales ou à niveaux multiples.
-                    </p>
+                    <p class="font-bold text-rose-900 text-xs uppercase tracking-wider mb-1">En sortie de classe de maternelle à 16h30 :</p>
+                    <p class="text-xs sm:text-sm text-slate-700 italic">"J'ai 25 petits épuisés, des notes sur des post-it perdus, et aucune trace écrite centralisée."</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- SECTION AVANT / APRÈS (MODE MIRACLE) -->
-    <section id="miracle" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div class="text-center max-w-3xl mx-auto mb-14">
-            <span class="bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Le Vrai Changement de Vie</span>
-            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4">La vie en "Mode Miracle" pour l'enseignant</h2>
-            <p class="text-slate-600 text-sm">Découvrez des exemples concrets de situations vécues avant et après l'adoption de Journal GenIA-L.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- AVANT -->
-            <div class="bg-rose-50/70 p-8 rounded-3xl border-2 border-rose-200">
-                <div class="inline-block bg-rose-200 text-rose-950 text-xs font-black px-3 py-1 rounded-full mb-6">❌ AVANT : LA SURCHARGE ADMINISTRATIVE</div>
-                <div class="space-y-6">
-                    <div class="border-b border-rose-200/80 pb-4">
-                        <p class="font-bold text-rose-900 text-xs uppercase tracking-wider mb-1">Le Dimanche à 19h00 :</p>
-                        <p class="text-xs sm:text-sm text-slate-700 italic">"Je passe mes dimanches à recopier des fiches de prépa et à chercher quel code du Référentiel FWB correspond à mon atelier découpage..."</p>
-                    </div>
-                    <div class="border-b border-rose-200/80 pb-4">
-                        <p class="font-bold text-rose-900 text-xs uppercase tracking-wider mb-1">En sortie de classe à 16h30 :</p>
-                        <p class="text-xs sm:text-sm text-slate-700 italic">"J'ai 25 petits épuisés, 4 notes éparpillées sur des post-it perdus, et aucune trace écrite de qui a réussi l'atelier."</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-rose-900 text-xs uppercase tracking-wider mb-1">Face à l'inspection :</p>
-                        <p class="text-xs sm:text-sm text-slate-700 italic">"J'angoisse chaque semaine à l'idée de ne pas avoir un journal de classe assez rigoureux."</p>
-                    </div>
+        <!-- APRÈS (MODE MIRACLE) -->
+        <div class="bg-emerald-50/80 p-8 rounded-3xl border-2 border-emerald-300 shadow-xl">
+            <div class="inline-block bg-emerald-300 text-emerald-950 text-xs font-black px-3 py-1 rounded-full mb-6">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
+            <div class="space-y-6">
+                <div class="border-b border-emerald-200 pb-4">
+                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Le Dimanche à 16h00 :</p>
+                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon dimanche m'appartient enfin."</p>
                 </div>
-            </div>
-
-            <!-- APRÈS (MODE MIRACLE) -->
-            <div class="bg-emerald-50/80 p-8 rounded-3xl border-2 border-emerald-300 shadow-xl">
-                <div class="inline-block bg-emerald-300 text-emerald-950 text-xs font-black px-3 py-1 rounded-full mb-6">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
-                <div class="space-y-6">
-                    <div class="border-b border-emerald-200 pb-4">
-                        <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Le Dimanche à 16h00 :</p>
-                        <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Miracle ! Ma semaine complète est prête, imprimée et classée. Mon dimanche m'appartient enfin."</p>
-                    </div>
-                    <div class="border-b border-emerald-200 pb-4">
-                        <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">En sortie de classe à 16h30 :</p>
-                        <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Je dicte 45 secondes dans mon téléphone. GenIA-L transforme mon enregistrement en une fiche synthétique avec tous les codes FWB intégrés !"</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Face à l'inspection :</p>
-                        <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Mon journal de classe est d'une clarté irréprochable. L'inspecteur a salué la rigueur du suivi des compétences."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAUX TÉMOIGNAGES -->
-    <section id="temoignages" class="relative z-10 max-w-7xl mx-auto px-6 py-16 bg-white/80 rounded-3xl border border-slate-200/80 my-8">
-        <div class="text-center max-w-2xl mx-auto mb-14">
-            <span class="bg-indigo-100 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Retour du Terrain</span>
-            <h2 class="text-3xl font-black text-slate-900 mt-3 mb-4">Ce que disent les enseignants</h2>
-            <p class="text-slate-600 text-sm">Retours d'expérience fictifs d'enseignants belges utilisant l'application au quotidien.</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-                    <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6">
-                        "C'est tout simplement un miracle pour ma vie de famille ! Avant, je culpabilisais de passer mon dimanche après-midi sur mes classeurs. Maintenant, je dicte mes idées d'ateliers et l'application me sort la prépa complète alignée FWB."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <div class="w-10 h-10 bg-amber-200 text-amber-950 font-bold rounded-full flex items-center justify-center text-xs">ML</div>
-                    <div>
-                        <h4 class="font-bold text-slate-900 text-xs">Marie-Laure D.</h4>
-                        <p class="text-[10px] text-slate-500">Institutrice M2 — Namur</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-                    <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6">
-                        "La dictée vocale est d'une précision incroyable. Je parle pendant que les enfants mettent leurs manteaux à 15h25, et à 15h30 mon bilan d'observation est structuré et rattaché aux acquis FWB."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <div class="w-10 h-10 bg-indigo-200 text-indigo-950 font-bold rounded-full flex items-center justify-center text-xs">TH</div>
-                    <div>
-                        <h4 class="font-bold text-slate-900 text-xs">Thomas H.</h4>
-                        <p class="text-[10px] text-slate-500">Instituteur M1/M3 — Liège</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center gap-1 text-amber-400 mb-4">★★★★★</div>
-                    <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6">
-                        "En section d'accueil, la différenciation des activités est essentielle. Journal GenIA-L me propose des adaptations instantanées. L'inspecteur a adoré la précision de mon journal."
-                    </p>
-                </div>
-                <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
-                    <div class="w-10 h-10 bg-rose-200 text-rose-950 font-bold rounded-full flex items-center justify-center text-xs">SF</div>
-                    <div>
-                        <h4 class="font-bold text-slate-900 text-xs">Sophie F.</h4>
-                        <p class="text-[10px] text-slate-500">Institutrice Accueil — Bruxelles</p>
-                    </div>
+                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">En sortie de classe de maternelle à 16h30 :</p>
+                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Je dicte 45 secondes dans mon téléphone. GenIA-L transforme mon enregistrement en une fiche synthétique avec tous les codes FWB intégrés !"</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CALL TO ACTION -->
-    <section id="telecharger" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden shadow-2xl">
-            <div class="max-w-2xl mx-auto relative z-10">
-                <span class="bg-amber-400 text-indigo-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Prêt pour le changement ?</span>
-                <h2 class="text-3xl sm:text-5xl font-black tracking-tight mb-4">Transformez votre manière de préparer la classe</h2>
-                <p class="text-slate-300 text-sm sm:text-base mb-8">Téléchargez l'application dès aujourd'hui sur Google Play Store et rejoignez les enseignants qui ont retrouvé leur sérénité.</p>
-                <div class="flex justify-center">
-                    <a href="https://play.google.com/store" target="_blank" class="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-8 py-4 rounded-2xl shadow-lg transition transform hover:-translate-y-0.5">
-                        <span class="text-lg">📲</span>
-                        <span class="text-base">Télécharger sur Google Play</span>
+<!-- TÉMOIGNAGES -->
+<section id="temoignages" class="relative z-10 max-w-7xl mx-auto px-6 py-16 bg-white/80 rounded-3xl border border-slate-200/80 my-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="bg-indigo-100 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Retour du Terrain</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-3 mb-4">Avis & Témoignages Enseignants de Maternelle</h2>
+        <p class="text-slate-600 text-sm">Découvrez les retours des institutrices et instituteurs de maternelle de la FWB sur leur utilisation de l'application.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6 pt-2">
+                « J'ai toujours détesté le côté administratif de mon métier, mais grâce à cette application, je me sens soutenue et motivée. Merci ! »
+            </p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                <div class="w-10 h-10 bg-amber-200 text-amber-950 font-bold rounded-full flex items-center justify-center text-xs">L.</div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-xs">L.</h4>
+                    <p class="text-[10px] text-slate-500">Brabant Wallon</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-slate-50/80 p-7 rounded-3xl border border-dashed border-slate-300 flex flex-col justify-between text-center items-center py-10">
+            <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-xl mb-3">💬</div>
+            <h3 class="font-bold text-slate-800 text-sm mb-1">Votre avis compte !</h3>
+            <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                Vous utilisez l'application dans votre classe ? Partagez votre expérience avec la communauté.
+            </p>
+            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">— Emplacement disponible —</span>
+        </div>
+
+        <div class="bg-indigo-50/70 p-7 rounded-3xl border border-indigo-200 flex flex-col justify-between text-center items-center py-10">
+            <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xl mb-3">✨</div>
+            <h3 class="font-bold text-indigo-950 text-sm mb-1">Testeur de l'application ?</h3>
+            <p class="text-indigo-900/80 text-xs leading-relaxed mb-6">
+                Envoyez-nous votre retour sur l'utilisation du Journal GenIA-L pour figurer sur cette page !
+            </p>
+            <a href="mailto:support@journalgenial.be?subject=Mon%20avis%20sur%20Journal%20GenIA-L" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-sm transition">
+                Déposer mon témoignage ✉️
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION TÉLÉCHARGEMENT & QR CODE ANDROID -->
+<section id="telecharger" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+    <div class="bg-gradient-to-r from-indigo-950 via-indigo-900 to-indigo-950 text-white rounded-3xl p-10 sm:p-14 relative overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-7 text-center lg:text-left">
+                <span class="bg-amber-400 text-indigo-950 text-xs font-black px-3.5 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Téléchargement Android</span>
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">Transformez votre manière de préparer votre classe</h2>
+                <p class="text-slate-300 text-sm sm:text-base mb-6 leading-relaxed">
+                    L'application propose un accès à l'IA limité puis une période d'essai gratuite de 7 jours, suivie d'un abonnement via Google Play pour accéder à l'ensemble des fonctionnalités avancées d'assistance par IA et de synchronisation entre appareils.
+                </p>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-7 py-3.5 rounded-2xl shadow-lg transition">
+                        <span>📲</span> Google Play Store
+                    </a>
+                    <a href="https://journalgenial.be/tutoriels/tuto-01-introduction.mp4" target="_blank" class="inline-flex items-center gap-2 bg-indigo-900 hover:bg-indigo-800 text-white font-bold px-6 py-3.5 rounded-2xl border border-indigo-700 shadow-md transition">
+                        <span>▶️</span> Voir la vidéo démo
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer class="relative z-10 border-t border-slate-200 bg-white py-10 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2">
-                <img src="logo.png" alt="Logo" class="w-6 h-6 object-contain">
-                <span class="font-bold text-slate-900">Journal GenIA-L</span>
-            </div>
-            <p>© 2026 Journal GenIA-L — Conçu pour l'Enseignement Maternelle en Fédération Wallonie-Bruxelles.</p>
-            <div class="flex gap-4">
-                <a href="#" class="hover:underline">Cadre Pédagogique</a>
-                <a href="#" class="hover:underline">RGPD & Protection des données</a>
+            <!-- CARTE QR CODE AVEC GOOGLEPLAY.PNG -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="bg-white p-6 rounded-3xl shadow-2xl text-slate-900 flex items-center gap-5 max-w-sm">
+                    <img src="img/GooglePlay.png" alt="QR Code Téléchargement Android" class="w-28 h-28 object-contain rounded-xl border border-slate-100 shadow-inner">
+                    <div class="text-left">
+                        <span class="bg-amber-100 text-amber-900 text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider">Flashez l'App</span>
+                        <h4 class="font-bold text-slate-900 text-sm mt-1">Installation Android</h4>
+                        <p class="text-xs text-slate-500 mt-0.5">Scannez avec votre smartphone pour télécharger l'application.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative z-10 border-t border-slate-200 bg-white py-10 text-center text-xs text-slate-500 mt-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+            <div class="bg-white px-2 py-1 rounded shadow-sm border border-slate-100 flex items-center">
+                <img src="img/brand.png" alt="Logo" class="h-5 object-contain">
+            </div>
+            <span class="font-bold text-slate-900">Journal GenIA-L</span>
+        </div>
+        <p>© 2026 Journal GenIA-L — Conçu pour l'Enseignement Maternelle en Fédération Wallonie-Bruxelles.</p>
+        <div class="flex gap-4">
+            <a href="#" class="hover:underline">Cadre Pédagogique</a>
+            <a href="#" class="hover:underline">RGPD & Protection des données</a>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
