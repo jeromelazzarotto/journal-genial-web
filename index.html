@@ -41,7 +41,6 @@
         <a href="#fonctionnalites" class="hover:text-indigo-600 transition">Fonctionnalités</a>
         <a href="#miracle" class="hover:text-indigo-600 transition">Mode Miracle</a>
         <a href="#temoignages" class="hover:text-indigo-600 transition">Témoignages</a>
-        <a href="#telecharger" class="hover:text-indigo-600 transition">Télécharger</a>
     </nav>
 
     <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-5 py-3 rounded-2xl shadow-md transition">
@@ -91,6 +90,120 @@
         </div>
     </div>
 </section>
+
+<!-- SECTION GALERIE / CARROUSEL D'IMAGES INTERACTIF -->
+<section id="galerie" class="relative z-10 max-w-5xl mx-auto px-6 py-12">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="bg-indigo-100 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Immersion Visuelle</span>
+        <h2 class="text-3xl font-black text-slate-900 mt-3 mb-2">Découvrez l'application en images</h2>
+        <p class="text-slate-600 text-sm">Naviguez à travers les visuels de l'interface et du projet.</p>
+    </div>
+
+    <!-- Conteneur du Carrousel -->
+    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative">
+
+        <!-- Image Centrale en Grand -->
+        <div class="relative overflow-hidden rounded-2xl bg-slate-100 flex items-center justify-center shadow-inner h-[350px] sm:h-[450px]">
+            <img id="carouselImage" src="img/carousel/1.png" alt="Aperçu Journal GenIA-L" class="max-h-full max-w-full object-contain transition-all duration-300">
+
+            <!-- Bouton Flèche Gauche -->
+            <button onclick="prevImage()" class="absolute left-4 bg-white/90 hover:bg-white text-indigo-950 w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-black text-xl transition transform hover:scale-105 focus:outline-none">
+                ❮
+            </button>
+
+            <!-- Bouton Flèche Droite -->
+            <button onclick="nextImage()" class="absolute right-4 bg-white/90 hover:bg-white text-indigo-950 w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-black text-xl transition transform hover:scale-105 focus:outline-none">
+                ❯
+            </button>
+        </div>
+
+        <!-- Indicateur de position & Titre de l'image -->
+        <div class="text-center mt-4">
+            <span id="imageCounter" class="text-xs font-bold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Image 1 sur 4</span>
+        </div>
+
+        <!-- Miniatures cliquables en bas -->
+        <div class="flex items-center justify-center gap-3 mt-6 overflow-x-auto pb-2" id="thumbnailContainer">
+            <!-- Les miniatures sont injectées dynamiquement par script -->
+        </div>
+    </div>
+</section>
+
+<!-- SCRIPT DU CARROUSEL -->
+<script>
+    // Liste de vos images dans le dossier img/ (ajoutez ou retirez selon vos besoins)
+    const images = [
+        { src: "img/carousel/1.png", title: "Journal GenIA-L sur smartphone" },
+        { src: "img/carousel/2.jpg", title: "Votre semainier consolidant les journées, avec proportion des domaines travaillés" },
+        { src: "img/carousel/3.jpg", title: "Conseil et dictée vocale pour améliorer votre préparation" },
+        { src: "img/carousel/4.png", title: "Evaluation d'élève prêt à imprimer, basés sur vos commentaires périodiquement dictés" },
+        { src: "img/carousel/5.png", title: "Partage anonyme de préparations en communauté" },
+        { src: "img/carousel/6.png", title: "Couverture du référentiel (vu / non-vu), réponses et conseils" },
+        { src: "img/carousel/7.png", title: "Synchronisation entre smartphones, tablettes ..." },
+        { src: "img/carousel/8.png", title: "Votre journée  après avoir dictés les activités prévues" },
+        { src: "img/carousel/9.png", title: "Compte-rendus de réunions basés sur des notes" },
+        { src: "img/carousel/10.png", title: "Rapport détaillé de couverture du référentiel" },
+        { src: "img/carousel/11.png", title: "Votre préparation après avoir dictés les activités prévues" }
+    ];
+
+    let currentIndex = 0;
+
+    const carouselImage = document.getElementById("carouselImage");
+    const imageCounter = document.getElementById("imageCounter");
+    const thumbnailContainer = document.getElementById("thumbnailContainer");
+
+    function updateCarousel() {
+        carouselImage.style.opacity = '0';
+        setTimeout(() => {
+            carouselImage.src = images[currentIndex].src;
+            carouselImage.style.opacity = '1';
+        }, 150);
+
+        imageCounter.textContent = `Image ${currentIndex + 1} sur ${images.length} — ${images[currentIndex].title}`;
+
+        // Mettre à jour les bordures des miniatures actives
+        const thumbs = thumbnailContainer.children;
+        for (let i = 0; i < thumbs.length; i++) {
+            if (i === currentIndex) {
+                thumbs[i].classList.add('border-indigo-600', 'ring-2', 'ring-indigo-400');
+                thumbs[i].classList.remove('border-slate-200', 'opacity-60');
+            } else {
+                thumbs[i].classList.remove('border-indigo-600', 'ring-2', 'ring-indigo-400');
+                thumbs[i].classList.add('border-slate-200', 'opacity-60');
+            }
+        }
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+    }
+
+    function setImage(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    // Génération automatique des miniatures au chargement
+    images.forEach((img, index) => {
+        const thumb = document.createElement('div');
+        thumb.className = `w-16 h-16 rounded-xl border-2 cursor-pointer overflow-hidden bg-slate-50 flex items-center justify-center transition ${index === 0 ? 'border-indigo-600 ring-2 ring-indigo-400' : 'border-slate-200 opacity-60 hover:opacity-100'}`;
+        thumb.onclick = () => setImage(index);
+
+        const thumbImg = document.createElement('img');
+        thumbImg.src = img.src;
+        thumbImg.alt = img.title;
+        thumbImg.className = 'w-full h-full object-contain p-1';
+
+        thumb.appendChild(thumbImg);
+        thumbnailContainer.appendChild(thumb);
+    });
+</script>
 
 <!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ -->
 <section id="presentation" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
@@ -194,12 +307,12 @@
             <div class="inline-block bg-emerald-300 text-emerald-950 text-xs font-black px-3 py-1 rounded-full mb-6">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
             <div class="space-y-6">
                 <div class="border-b border-emerald-200 pb-4">
-                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Le Dimanche à 16h00 :</p>
-                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon dimanche m'appartient enfin."</p>
+                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Le Vendredi à 17h00 :</p>
+                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon week-end m'appartient enfin."</p>
                 </div>
                 <div>
-                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">En sortie de classe de maternelle à 16h30 :</p>
-                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Je dicte 45 secondes dans mon téléphone. GenIA-L transforme mon enregistrement en une fiche synthétique avec tous les codes FWB intégrés !"</p>
+                    <p class="font-bold text-emerald-950 text-xs uppercase tracking-wider mb-1">Invitée en dernière minute au resto ce soir :</p>
+                    <p class="text-xs sm:text-sm text-slate-800 font-medium italic">"Je dicte deux préparations et le contenu prévu de ma journée. En 12 minutes, j'ai les documents prêts avec tous les codes FWB intégrés !"</p>
                 </div>
             </div>
         </div>
@@ -210,11 +323,10 @@
 <section id="temoignages" class="relative z-10 max-w-7xl mx-auto px-6 py-16 bg-white/80 rounded-3xl border border-slate-200/80 my-8">
     <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="bg-indigo-100 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Retour du Terrain</span>
-        <h2 class="text-3xl font-black text-slate-900 mt-3 mb-4">Avis & Témoignages Enseignants de Maternelle</h2>
-        <p class="text-slate-600 text-sm">Découvrez les retours des institutrices et instituteurs de maternelle de la FWB sur leur utilisation de l'application.</p>
+        <h2 class="text-3xl font-black text-slate-900 mt-3 mb-4">Témoignages - enseignants de maternelle</h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
             <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6 pt-2">
                 « J'ai toujours détesté le côté administratif de mon métier, mais grâce à cette application, je me sens soutenue et motivée. Merci ! »
@@ -222,30 +334,23 @@
             <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
                 <div class="w-10 h-10 bg-amber-200 text-amber-950 font-bold rounded-full flex items-center justify-center text-xs">L.</div>
                 <div>
-                    <h4 class="font-bold text-slate-900 text-xs">L.</h4>
+                    <h4 class="font-bold text-slate-900 text-xs">Mme S.</h4>
                     <p class="text-[10px] text-slate-500">Brabant Wallon</p>
                 </div>
             </div>
         </div>
 
-        <div class="bg-slate-50/80 p-7 rounded-3xl border border-dashed border-slate-300 flex flex-col justify-between text-center items-center py-10">
-            <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center text-xl mb-3">💬</div>
-            <h3 class="font-bold text-slate-800 text-sm mb-1">Votre avis compte !</h3>
-            <p class="text-slate-500 text-xs leading-relaxed mb-4">
-                Vous utilisez l'application dans votre classe ? Partagez votre expérience avec la communauté.
+        <div class="bg-white p-7 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <p class="text-slate-700 text-xs sm:text-sm italic leading-relaxed mb-6 pt-2">
+                « Facile à utiliser sur smartphone ou tablette, cette application s'impose comme un véritable gain de temps. Les tâches administratives devenant moins laborieuses, elle nous aide à n'oublier aucune compétence. Un bel outil ! »
             </p>
-            <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">— Emplacement disponible —</span>
-        </div>
-
-        <div class="bg-indigo-50/70 p-7 rounded-3xl border border-indigo-200 flex flex-col justify-between text-center items-center py-10">
-            <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center text-xl mb-3">✨</div>
-            <h3 class="font-bold text-indigo-950 text-sm mb-1">Testeur de l'application ?</h3>
-            <p class="text-indigo-900/80 text-xs leading-relaxed mb-6">
-                Envoyez-nous votre retour sur l'utilisation du Journal GenIA-L pour figurer sur cette page !
-            </p>
-            <a href="mailto:support@journalgenial.be?subject=Mon%20avis%20sur%20Journal%20GenIA-L" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-sm transition">
-                Déposer mon témoignage ✉️
-            </a>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+                <div class="w-10 h-10 bg-amber-200 text-amber-950 font-bold rounded-full flex items-center justify-center text-xs">L.</div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-xs">Mme L.J.</h4>
+                    <p class="text-[10px] text-slate-500">Brabant Wallon</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
