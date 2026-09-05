@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal GenIA-L — L'assistant parfait pour les instits maternels (FWB, Belgique)</title>
+    <title>Journal GenIA-L — L'assistant idéal pour les instits maternels (FWB, Belgique)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -19,33 +19,32 @@
 <div class="blob-indigo"></div>
 <div class="blob-rose"></div>
 
-<!-- BANNIÈRE EN-TÊTE -->
-<div class="relative z-20 bg-indigo-950 text-white py-3 px-4 text-center text-xs font-semibold flex items-center justify-center gap-2 shadow-md">
-    <span class="bg-amber-400 text-indigo-950 text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">Application Maternelle FWB 🇧🇪</span>
-    <span class="hidden sm:inline">• Journal de classe Généré par IA</span>
-</div>
+<!-- HEADER BLEU INTÉGRANT LE LOGO, LE TITRE, LES MENUS ET LE CTA -->
+<header class="relative z-20 bg-indigo-950 text-white py-3 px-6 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
 
-<!-- NAVIGATION AVEC LOGO BRANDÉ SUR FOND BLANC -->
-<header class="relative z-10 max-w-7xl mx-auto px-6 py-4 flex items-center justify-between border-b border-slate-200/60">
-    <div class="flex items-center gap-4">
-        <div class="bg-white px-3 py-2 rounded-xl shadow-sm border border-slate-100 flex items-center">
-            <img src="img/brand.png" alt="Journal GenIA-L" class="h-8 sm:h-9 object-contain">
+        <!-- LOGO + TITRE -->
+        <div class="flex items-center gap-3">
+            <div class="bg-white px-2.5 py-1.5 rounded-xl shadow-sm flex items-center">
+                <img src="img/brand.png" alt="Journal GenIA-L" class="h-7 object-contain">
+            </div>
+            <span class="text-xs sm:text-sm font-extrabold tracking-tight text-white">Journal de classe Généré par IA</span>
         </div>
-        <div class="hidden sm:block">
-            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Journal de classe Généré par IA</p>
-        </div>
+
+        <!-- MENUS DE NAVIGATION -->
+        <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-300 uppercase tracking-wider">
+            <a href="#presentation" class="hover:text-amber-400 transition">Présentation</a>
+            <a href="#fonctionnalites" class="hover:text-amber-400 transition">Fonctionnalités</a>
+            <a href="#miracle" class="hover:text-amber-400 transition">Mode Miracle</a>
+            <a href="#temoignages" class="hover:text-amber-400 transition">Témoignages</a>
+        </nav>
+
+        <!-- BOUTON INSTALLER L'APP -->
+        <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="bg-amber-400 hover:bg-amber-300 text-indigo-950 font-extrabold text-xs px-4 py-2 rounded-xl shadow transition flex items-center gap-1.5">
+            <span>Installer l'App</span> <span>📲</span>
+        </a>
+
     </div>
-
-    <nav class="hidden md:flex items-center gap-6 text-xs font-bold text-slate-600 uppercase tracking-wider">
-        <a href="#presentation" class="hover:text-indigo-600 transition">Présentation</a>
-        <a href="#fonctionnalites" class="hover:text-indigo-600 transition">Fonctionnalités</a>
-        <a href="#miracle" class="hover:text-indigo-600 transition">Mode Miracle</a>
-        <a href="#temoignages" class="hover:text-indigo-600 transition">Témoignages</a>
-    </nav>
-
-    <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="bg-indigo-900 hover:bg-indigo-950 text-white font-bold text-xs px-5 py-3 rounded-2xl shadow-md transition">
-        Installer l'App 📲
-    </a>
 </header>
 
 <!-- HERO SECTION AVEC BANNIÈRE -->
@@ -91,18 +90,27 @@
     </div>
 </section>
 
-<!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ -->
+<!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ AVEC LE LOGO PLEIN (SANS CADRE NI BORD) -->
 <section id="presentation" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
     <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-8">
-        <div class="max-w-3xl">
-            <span class="bg-indigo-100 text-indigo-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Présentation</span>
-            <h2 class="text-3xl font-black text-slate-900 mt-2 mb-4">L'application indispensable pour l'enseignement maternel en Belgique francophone</h2>
-            <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Journal GenIA-L combine la puissance de l'intelligence artificielle et une ergonomie fluide pour accélérer vos journaux de classe, vos préparations, vos évaluations d'élèves sur smartphone ou tablette. Pensé pour s'adapter aux réalités administratives et pédagogiques de la FWB (Référentiel), c'est un véritable assistant au quotidien qui vous laisse vous concentrer sur l'essentiel : les apprentissages et les élèves.
-            </p>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <!-- Texte descriptif à gauche -->
+            <div class="lg:col-span-8 space-y-4">
+                <span class="bg-indigo-100 text-indigo-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Présentation</span>
+                <h2 class="text-3xl font-black text-slate-900 leading-tight">L'application indispensable pour l'enseignement maternel en Belgique francophone</h2>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                    Journal GenIA-L combine la puissance de l'intelligence artificielle et une ergonomie fluide pour accélérer vos journaux de classe, vos préparations, vos évaluations d'élèves sur smartphone ou tablette. Pensé pour s'adapter aux réalités administratives et pédagogiques de la FWB (Référentiel), c'est un véritable assistant au quotidien qui vous laisse vous concentrer sur l'essentiel : les apprentissages et les élèves.
+                </p>
+            </div>
+
+            <!-- Logo sans cadre ni bord -->
+            <div class="lg:col-span-4 flex justify-center items-center">
+                <img src="img/logo.png" alt="Journal GenIA-L Logo" class="w-full max-w-[260px] h-auto object-contain">
+            </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 pt-4 border-t border-slate-100">
+        <div class="grid md:grid-cols-2 gap-8 pt-6 border-t border-slate-100">
             <div class="space-y-3">
                 <h3 class="font-bold text-indigo-950 text-lg flex items-center gap-2">
                     <span>🔒</span> Respect total de la vie privée
@@ -205,7 +213,6 @@
 
 <!-- SCRIPT DU CARROUSEL -->
 <script>
-    // Liste de vos images dans le dossier img/ (ajoutez ou retirez selon vos besoins)
     const images = [
         { src: "img/carousel/1.png", title: "Journal GenIA-L sur smartphone" },
         { src: "img/carousel/2.jpg", title: "Votre semainier consolidant les journées, avec proportion des domaines travaillés" },
@@ -235,7 +242,6 @@
 
         imageCounter.textContent = `Image ${currentIndex + 1} sur ${images.length} — ${images[currentIndex].title}`;
 
-        // Mettre à jour les bordures des miniatures actives
         const thumbs = thumbnailContainer.children;
         for (let i = 0; i < thumbs.length; i++) {
             if (i === currentIndex) {
@@ -263,7 +269,6 @@
         updateCarousel();
     }
 
-    // Génération automatique des miniatures au chargement
     images.forEach((img, index) => {
         const thumb = document.createElement('div');
         thumb.className = `w-16 h-16 rounded-xl border-2 cursor-pointer overflow-hidden bg-slate-50 flex items-center justify-center transition ${index === 0 ? 'border-indigo-600 ring-2 ring-indigo-400' : 'border-slate-200 opacity-60 hover:opacity-100'}`;
@@ -360,8 +365,8 @@
 <div class="bg-gradient-to-r from-emerald-500 via-teal-600 to-indigo-700 text-white p-4 rounded-2xl shadow-md border-2 border-emerald-300 text-center flex items-center justify-center gap-4">
     <span class="text-3xl">📱</span>
     <span class="text-2xl font-black uppercase tracking-wider">
-                    Disponible sur Android — Smartphones &amp; Tablettes
-                </span>
+        Disponible sur Android — Smartphones &amp; Tablettes
+    </span>
     <span class="text-3xl">📲</span>
 </div>
 

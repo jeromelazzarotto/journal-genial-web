@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal GenIA-L - Flyers A5 x2 (Format A4 Paysage)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 0;
+        }
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 297mm;
+            height: 210mm;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Grille 2 colonnes, 1 ligne pour 2 flyers au format A5 sur une page A4 paysage */
+        .flyer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 148.5mm);
+            grid-template-rows: 210mm;
+            width: 297mm;
+            height: 210mm;
+        }
+
+        /* Unité A5 individuelle (148.5mm x 210mm) avec flexbox complet */
+        .flyer-item {
+            width: 148.5mm;
+            height: 210mm;
+            padding: 10mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            background-color: #FAF8F5;
+            border-right: 1px dashed #E2E8F0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<!-- CONTENEUR GLOBAL A4 PAYSAGE -->
+<div class="flyer-grid">
+
+    <!-- FLYER 1 (Gauche) -->
+    <div class="flyer-item">
+        <!-- En-tête -->
+        <div class="flex items-center justify-between">
+            <div class="bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm flex items-center">
+                <img src="img/brand.png" alt="Journal GenIA-L" class="h-7 object-contain">
+            </div>
+            <span class="bg-amber-400 text-indigo-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Maternelle FWB</span>
+        </div>
+
+        <!-- Contenu centralisé verticalement pour une répartition parfaite et aérée -->
+        <div class="flex flex-col items-center justify-around my-auto w-full py-2">
+            <div style="height: 1mm;"></div>
+            <!-- Titre principal -->
+            <div class="text-center space-y-2 w-full">
+                <h1 class="text-[36px] font-black text-slate-900 tracking-tight leading-tight m-0">
+                    Simplifiez votre quotidien,<br>
+                    <span class="bg-gradient-to-r from-amber-500 via-orange-500 to-indigo-600 bg-clip-text text-transparent">gardez vos soirées.</span>
+                </h1>
+            </div>
+            <div style="height: 2mm;"></div>
+            <!-- Bannière visuelle -->
+            <div class="w-full rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-white my-1">
+                <img src="img/banner.png" alt="Aperçu application" class="w-full h-auto max-h-[58mm] object-cover block">
+            </div>
+
+            <div style="height: 2mm;"></div>
+            <!-- SECTION AVANT / APRÈS (MODE MIRACLE) -->
+            <section id="miracle" class="relative z-10 w-full">
+                <div class="text-center mb-2">
+                    <h2 class="text-sm font-black text-slate-900 mt-0 mb-1">La vie en "Mode Miracle" pour l'enseignant de maternelle</h2>
+                    <p class="text-slate-600 text-[10px]">Découvrez des exemples concrets de situations vécues avant et après l'adoption de Journal GenIA-L.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 text-left">
+                    <!-- AVANT -->
+                    <div class="bg-rose-50/70 p-3 rounded-2xl border border-rose-200">
+                        <div class="inline-block bg-rose-200 text-rose-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1.5">❌ AVANT : LA SURCHARGE ADMINISTRATIVE</div>
+                        <div class="space-y-2">
+                            <div class="border-b border-rose-200/80 pb-1">
+                                <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">Le Dimanche à 19h00 :</p>
+                                <p class="text-[10px] text-slate-700 italic leading-snug">"Je passe mes dimanches à recopier des fiches de prépa et à chercher quel code du Référentiel FWB correspond à mon atelier..."</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">En sortie de classe de maternelle à 16h30 :</p>
+                                <p class="text-[10px] text-slate-700 italic leading-snug">"J'ai 25 petits épuisés, des notes sur des post-it perdus, et aucune trace écrite centralisée."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- APRÈS (MODE MIRACLE) -->
+                    <div class="bg-emerald-50/80 p-3 rounded-2xl border border-emerald-300 shadow-sm">
+                        <div class="inline-block bg-emerald-300 text-emerald-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1.5">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
+                        <div class="space-y-2">
+                            <div class="border-b border-emerald-200 pb-1">
+                                <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Le Vendredi à 17h00 :</p>
+                                <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon week-end m'appartient enfin."</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Invitée en dernière minute au resto ce soir :</p>
+                                <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Je dicte deux préparations et le contenu prévu de ma journée. En 12 minutes, j'ai les documents prêts avec tous les codes FWB intégrés !"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Boîte bleue du bas -->
+        <div class="bg-indigo-950 text-white p-3 rounded-2xl grid grid-cols-2 gap-3 shadow-lg items-center">
+            <!-- QR Code Gauche (Site Web) -->
+            <div class="flex items-center gap-2.5 pr-2">
+                <img src="img/GooglePlay.png" alt="QR Code Site" class="w-14 h-14 p-1 bg-white rounded-xl flex-shrink-0 object-contain">
+                <div class="text-left overflow-hidden">
+                    <span class="bg-amber-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">Site Officiel</span>
+                    <p class="text-[10.5px] font-bold text-white mt-1">Visitez www.journalgenial.be</p>
+                </div>
+            </div>
+
+            <!-- QR Code Droite (Démo Vidéo) -->
+            <div class="flex items-center justify-end gap-2.5 border-l border-indigo-800 pl-3">
+                <div class="text-right overflow-hidden">
+                    <span class="bg-emerald-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">En action</span>
+                    <p class="text-[10.5px] font-bold text-white mt-1">Démonstration en vidéo</p>
+                </div>
+                <img src="img/Tutointroduction.png" alt="QR Code Vidéo" class="w-14 h-14 p-1 bg-white rounded-xl flex-shrink-0 object-contain">
+            </div>
+        </div>
+    </div>
+
+    <!-- FLYER 2 (Droite - Copie exacte du Flyer 1) -->
+    <div class="flyer-item">
+        <!-- En-tête -->
+        <div class="flex items-center justify-between">
+            <div class="bg-white px-3 py-1.5 rounded-xl border border-slate-200 shadow-sm flex items-center">
+                <img src="img/brand.png" alt="Journal GenIA-L" class="h-7 object-contain">
+            </div>
+            <span class="bg-amber-400 text-indigo-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">Maternelle FWB</span>
+        </div>
+
+        <!-- Contenu centralisé verticalement pour une répartition parfaite et aérée -->
+        <div class="flex flex-col items-center justify-around my-auto w-full py-2">
+            <div style="height: 1mm;"></div>
+            <!-- Titre principal -->
+            <div class="text-center space-y-2 w-full">
+                <h1 class="text-[36px] font-black text-slate-900 tracking-tight leading-tight m-0">
+                    Simplifiez votre quotidien,<br>
+                    <span class="bg-gradient-to-r from-amber-500 via-orange-500 to-indigo-600 bg-clip-text text-transparent">gardez vos soirées.</span>
+                </h1>
+            </div>
+            <div style="height: 2mm;"></div>
+            <!-- Bannière visuelle -->
+            <div class="w-full rounded-2xl overflow-hidden border-2 border-white shadow-lg bg-white my-1">
+                <img src="img/banner.png" alt="Aperçu application" class="w-full h-auto max-h-[58mm] object-cover block">
+            </div>
+
+            <div style="height: 2mm;"></div>
+            <!-- SECTION AVANT / APRÈS (MODE MIRACLE) -->
+            <section id="miracle" class="relative z-10 w-full">
+                <div class="text-center mb-2">
+                    <h2 class="text-sm font-black text-slate-900 mt-0 mb-1">La vie en "Mode Miracle" pour l'enseignant de maternelle</h2>
+                    <p class="text-slate-600 text-[10px]">Découvrez des exemples concrets de situations vécues avant et après l'adoption de Journal GenIA-L.</p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 text-left">
+                    <!-- AVANT -->
+                    <div class="bg-rose-50/70 p-3 rounded-2xl border border-rose-200">
+                        <div class="inline-block bg-rose-200 text-rose-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1.5">❌ AVANT : LA SURCHARGE ADMINISTRATIVE</div>
+                        <div class="space-y-2">
+                            <div class="border-b border-rose-200/80 pb-1">
+                                <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">Le Dimanche à 19h00 :</p>
+                                <p class="text-[10px] text-slate-700 italic leading-snug">"Je passe mes dimanches à recopier des fiches de prépa et à chercher quel code du Référentiel FWB correspond à mon atelier..."</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">En sortie de classe de maternelle à 16h30 :</p>
+                                <p class="text-[10px] text-slate-700 italic leading-snug">"J'ai 25 petits épuisés, des notes sur des post-it perdus, et aucune trace écrite centralisée."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- APRÈS (MODE MIRACLE) -->
+                    <div class="bg-emerald-50/80 p-3 rounded-2xl border border-emerald-300 shadow-sm">
+                        <div class="inline-block bg-emerald-300 text-emerald-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1.5">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
+                        <div class="space-y-2">
+                            <div class="border-b border-emerald-200 pb-1">
+                                <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Le Vendredi à 17h00 :</p>
+                                <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon week-end m'appartient enfin."</p>
+                            </div>
+                            <div>
+                                <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Invitée en dernière minute au resto ce soir :</p>
+                                <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Je dicte deux préparations et le contenu prévu de ma journée. En 12 minutes, j'ai les documents prêts avec tous les codes FWB intégrés !"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Boîte bleue du bas -->
+        <div class="bg-indigo-950 text-white p-3 rounded-2xl grid grid-cols-2 gap-3 shadow-lg items-center">
+            <!-- QR Code Gauche (Site Web) -->
+            <div class="flex items-center gap-2.5 pr-2">
+                <img src="img/GooglePlay.png" alt="QR Code Site" class="w-14 h-14 p-1 bg-white rounded-xl flex-shrink-0 object-contain">
+                <div class="text-left overflow-hidden">
+                    <span class="bg-amber-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">Site Officiel</span>
+                    <p class="text-[10.5px] font-bold text-white mt-1">Visitez www.journalgenial.be</p>
+                </div>
+            </div>
+
+            <!-- QR Code Droite (Démo Vidéo) -->
+            <div class="flex items-center justify-end gap-2.5 border-l border-indigo-800 pl-3">
+                <div class="text-right overflow-hidden">
+                    <span class="bg-emerald-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">En action</span>
+                    <p class="text-[10.5px] font-bold text-white mt-1">Démonstration en vidéo</p>
+                </div>
+                <img src="img/Tutointroduction.png" alt="QR Code Vidéo" class="w-14 h-14 p-1 bg-white rounded-xl flex-shrink-0 object-contain">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
