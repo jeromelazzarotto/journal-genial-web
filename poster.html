@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal GenIA-L - Affiche Salle des Profs A3</title>
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        @page {
+            size: 297mm 420mm;
+            margin: 0;
+        }
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 297mm;
+            height: 420mm;
+            margin: 0;
+            padding: 0;
+            background-color: #FAF8F5;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        .font-brand { font-family: 'Fredoka', cursive; }
+        
+        .poster-container {
+            width: 297mm;
+            height: 420mm;
+            padding: 18mm 16mm 14mm 16mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            background: #FAF8F5;
+        }
+
+        @media print {
+            html, body {
+                width: 297mm;
+                height: 420mm;
+            }
+            .poster-container {
+                width: 297mm;
+                height: 420mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+        
+        <!-- DECORATIVE BACKGROUND BLOBS -->
+        <div class="absolute -top-20 -left-20 w-[500px] h-[500px] bg-amber-300/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 -right-20 w-[600px] h-[600px] bg-indigo-400/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] bg-emerald-300/30 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- HEADER -->
+        <header class="relative z-10 flex items-center justify-between border-b-4 border-slate-900/10 pb-4">
+            <div class="flex items-center gap-6">
+                <img src="img/logo.png" alt="Logo Journal GenIA-L" class="w-24 h-24 object-contain rounded-2xl shadow-md bg-white p-1">
+                <div>
+                    <span class="text-5xl font-black text-indigo-950 font-brand tracking-tight">Journal <span class="text-amber-500">GenIA-L</span></span>
+                    <p class="text-base font-extrabold text-slate-600 tracking-wider mt-1">Journal de classe Généré par IA</p>
+                    <p class="text-sm font-extrabold text-indigo-900 uppercase tracking-widest mt-0.5">L'Assistant pour les Enseignants Maternels de la FWB 🇧🇪</p>
+                </div>
+            </div>
+            <div class="bg-amber-400 text-indigo-950 px-6 py-4 rounded-2xl font-black text-sm uppercase tracking-wider shadow-md text-center">
+                Gain de temps<br>&amp; Sérénité
+            </div>
+        </header>
+
+        <!-- ACCROCHE PRINCIPALE -->
+        <main class="relative z-10 flex-1 flex flex-col justify-center my-3 space-y-4">
+            <div class="space-y-3">
+                <div class="flex items-center gap-3">
+                    <div class="inline-block bg-emerald-100 border-2 border-emerald-400 text-emerald-950 px-6 py-2 rounded-full font-black text-base shadow-sm">
+                        ✨ Chères et chers collègues...
+                    </div>
+                    <div class="inline-block bg-amber-400 border-2 border-amber-500 text-indigo-950 px-6 py-2 rounded-full font-black text-base shadow-sm uppercase tracking-wider">
+                        🔥 Profitez des offres de lancement 2026 !
+                    </div>
+                </div>
+
+                <h1 class="text-5xl font-black text-slate-900 leading-[1.12] tracking-tight">
+                    Et si vos dimanches ne servaient plus <br>
+                    à <span class="bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 bg-clip-text text-transparent">remplir vos préparations ?</span>
+                </h1>
+
+                <p class="text-xl text-slate-700 leading-relaxed font-semibold max-w-4xl">
+                    Faites-vous assister et simplifiez la rédaction de vos journaux de classe, la création de vos préparations et la gestion de vos notes d'élèves grâce à une application sur-mesure, conçue par des enseignants et pour des enseignants.
+                </p>
+            </div>
+
+            <!-- 6 VIGNETTES -->
+            <div class="grid grid-cols-3 gap-5 pt-1">
+                
+                <!-- VIGNETTE 1 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col justify-between space-y-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-amber-100 text-amber-900 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">01</div>
+                        <h3 class="font-black text-slate-900 text-base">📚 Référentiel FWB Direct</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">Simplifie et accélère vos préparations et vos journaux de classe (quotidien/semaine) en les liant automatiquement aux savoirs et compétences officiels de la FWB.</p>
+                </div>
+
+                <!-- VIGNETTE 2 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col justify-between space-y-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-900 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">02</div>
+                        <h3 class="font-black text-slate-900 text-base">🎙️ Dictée Vocale &amp; IA</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">À partir de simples notes vocales ou brutes, l'IA formalise et structure vos préparations en lien direct avec tous les attendus, savoirs et autonomies du Référentiel.</p>
+                </div>
+
+                <!-- VIGNETTE 3 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col justify-between space-y-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-950 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">03</div>
+                        <h3 class="font-black text-slate-900 text-base">🔒 Confidentialité &amp; RGPD</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">Ni l'IA ni le Cloud ne conservent vos données. Tout reste sur votre appareil et votre Google Drive personnel. Rien ne sert à entraîner l'IA, l'app ne connaît même pas votre nom.</p>
+                </div>
+
+                <!-- VIGNETTE 4 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col justify-between space-y-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-rose-100 text-rose-900 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">04</div>
+                        <h3 class="font-black text-slate-900 text-base">📁 Propriété 100% Libre</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">Vos écrits restent votre entière propriété. Récupérez et exportez vos données à tout moment. Partagez et récupérez gratuitement et de façon anonyme vos préparations avec la communauté, si vous le souhaitez.</p>
+                </div>
+
+                <!-- VIGNETTE 5 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-amber-300 shadow-sm flex flex-col justify-between space-y-2 relative overflow-hidden">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-amber-400 text-indigo-950 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">05</div>
+                        <h3 class="font-black text-slate-900 text-base">🌱 Suivi d'Élèves &amp; Réunions</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">Un post-it, un résumé de réunion, une observation d'enfant : l'IA les transforme à la demande en comptes-rendus ou synthèses d'évolution d'élèves.</p>
+                </div>
+
+                <!-- VIGNETTE 6 -->
+                <div class="bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm flex flex-col justify-between space-y-2">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-violet-100 text-violet-900 rounded-xl flex items-center justify-center font-black text-lg flex-shrink-0">06</div>
+                        <h3 class="font-black text-slate-900 text-base">⚡ Testez Gratuitement</h3>
+                    </div>
+                    <p class="text-slate-600 text-sm font-medium leading-relaxed">Profitez d'un quota de découverte offert dès l'installation, puis d'une semaine d'essai sans engagement via l'interface sécurisée Google Play Store.</p>
+                </div>
+
+            </div>
+
+            <!-- CITATION TESTIMONIAL -->
+            <div class="bg-white p-5 rounded-2xl border-2 border-indigo-100 shadow-sm flex items-center gap-5">
+                <div class="flex-1">
+                    <p class="text-slate-700 text-sm font-semibold italic leading-snug">
+                        « Facile à utiliser sur smartphone ou tablette, cette application s'impose comme un véritable gain de temps. Les tâches administratives devenant moins laborieuses, elle nous aide à n'oublier aucune compétence. Un bel outil ! »
+                    </p>
+                    <p class="text-right text-xs font-bold text-slate-500 mt-1">— Mme S. (Enseignante M3, Brabant-Wallon)</p>
+                </div>
+                <div class="flex-1">
+                    <p class="text-slate-700 text-sm font-semibold italic leading-snug">
+                        « Je n'y croyais pas et pourtant : 3 préparations et mon journalier réalisé en 15 minutes, avec les codes du référentiel et même des conseils pertinents complémentaires à mes 20 ans d'expériences. Bravo et merci !»
+                    </p>
+                    <p class="text-right text-xs font-bold text-slate-500 mt-1">— Mme L.J (Enseignante M1, Brabant-Wallon)</p>
+                </div>
+            </div>
+
+            <!-- GRANDE BANNIÈRE DISPONIBILITÉ ANDROID -->
+            <div class="bg-gradient-to-r from-emerald-500 via-teal-600 to-indigo-700 text-white p-4 rounded-2xl shadow-md border-2 border-emerald-300 text-center flex items-center justify-center gap-4">
+                <span class="text-3xl">📱</span>
+                <span class="text-2xl font-black uppercase tracking-wider">
+                    Disponible sur Android — Smartphones &amp; Tablettes
+                </span>
+                <span class="text-3xl">📲</span>
+            </div>
+        </main>
+
+        <!-- SECTION FOOTER & QR CODES LOCALES -->
+        <footer class="relative z-10 space-y-3">
+            <div class="bg-indigo-950 text-white p-5 rounded-3xl border-4 border-indigo-900 shadow-xl grid grid-cols-2 gap-6 items-center">
+                
+                <!-- QR CODE 1 : DEMO -->
+                <div class="flex items-center gap-4 bg-indigo-900/60 p-4 rounded-2xl border border-indigo-700/50">
+                    <img src="img/Tutointroduction.png" alt="QR Code Démo Video" class="w-24 h-24 p-2 bg-white rounded-xl shadow-inner flex-shrink-0 object-contain">
+                    <div>
+                        <span class="bg-amber-400 text-indigo-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Découverte en images</span>
+                        <h4 class="font-black text-base text-white mt-1">Vidéos de démonstration 🎬</h4>
+                        <p class="text-xs text-indigo-200 mt-0.5 leading-snug">Scannez pour voir l'application en action.</p>
+                    </div>
+                </div>
+
+                <!-- QR CODE 2 : GOOGLE PLAY STORE -->
+                <div class="flex items-center gap-4 bg-indigo-900/60 p-4 rounded-2xl border border-indigo-700/50">
+                    <img src="img/GooglePlay.png" alt="QR Code Google Play Store" class="w-24 h-24 p-2 bg-white rounded-xl shadow-inner flex-shrink-0 object-contain">
+                    <div>
+                        <span class="bg-emerald-400 text-indigo-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">Application Mobile</span>
+                        <h4 class="font-black text-base text-white mt-1">Disponible sur Google Play 📲</h4>
+                        <p class="text-xs text-indigo-200 mt-0.5 leading-snug">Scannez pour installer directement sur votre appareil.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PIED DE PAGE -->
+            <div class="text-center text-xs font-bold text-slate-500">
+                Support officiel &amp; renseignements : <strong class="text-slate-800">support@journalgenial.be</strong> — <span class="text-indigo-900">https://journalgenial.be</span>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
