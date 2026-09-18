@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal GenIA-L — L'assistant idéal pour les instits maternels (FWB, Belgique)</title>
+
+    <!-- Méta-description SEO pour Google -->
+    <meta name="description" content="Découvrez Journal GenIA-L, l'application Android intelligente conçue pour les enseignants du maternel en Fédération Wallonie-Bruxelles (FWB). Accélérez vos journaux de classe et préparations pédagogiques, dictez, prenez les conseils et ne cherchez plus les codes du référentiel !.">
+
+    <!-- Balises Open Graph pour les réseaux sociaux et WhatsApp -->
+    <meta property="og:title" content="Journal GenIA-L — L'assistant idéal pour les instits maternels (FWB)">
+    <meta property="og:description" content="Accélérez vos journaux de classe et vos fiches de préparation grâce à l'IA, en lien direct avec le référentiel de la FWB.">
+    <meta property="og:image" content="https://www.journalgenial.be/img/banner.png">
+    <meta property="og:url" content="https://www.journalgenial.be/">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -37,7 +48,8 @@
             <a href="#fonctionnalites" class="hover:text-amber-400 transition">Fonctionnalités</a>
             <a href="#miracle" class="hover:text-amber-400 transition">Mode Miracle</a>
             <a href="#temoignages" class="hover:text-amber-400 transition">Témoignages</a>
-            <a href="faq.html" class="text-amber-400 hover:text-amber-300 transition">FAQ</a>
+            <a href="faq.html" class="hover:text-amber-400 transition">FAQ</a>
+            <a href="tutoriels.html" class="hover:text-amber-400 transition">Tutoriels</a>
         </nav>
 
         <!-- BOUTON INSTALLER L'APP -->
@@ -73,8 +85,8 @@
                 <a href="#telecharger" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition">
                     <span>📲</span> Télécharger sur Android
                 </a>
-                <a href="https://journalgenial.be/tutoriels/tuto-01-introduction.mp4" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-indigo-950 font-bold px-6 py-3.5 rounded-2xl border border-slate-200 shadow-md transition">
-                    <span>▶️</span> Voir la démo vidéo
+                <a href="tutoriels.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-indigo-950 font-bold px-6 py-3.5 rounded-2xl border border-slate-200 shadow-md transition">
+                    <span>▶️</span> Voir les tutoriels vidéo
                 </a>
             </div>
         </div>
@@ -91,12 +103,11 @@
     </div>
 </section>
 
-<!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ AVEC LE LOGO PLEIN (SANS CADRE NI BORD) -->
+<!-- SECTION PRÉSENTATION & DESCRIPTIF DÉTAILLÉ -->
 <section id="presentation" class="relative z-10 max-w-7xl mx-auto px-6 py-12">
     <div class="bg-white rounded-3xl border border-slate-200 p-8 sm:p-12 shadow-sm space-y-8">
 
         <div class="grid lg:grid-cols-12 gap-8 items-center">
-            <!-- Texte descriptif à gauche -->
             <div class="lg:col-span-8 space-y-4">
                 <span class="bg-indigo-100 text-indigo-900 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Présentation</span>
                 <h2 class="text-3xl font-black text-slate-900 leading-tight">L'application indispensable pour l'enseignement maternel en Belgique francophone</h2>
@@ -105,7 +116,6 @@
                 </p>
             </div>
 
-            <!-- Logo sans cadre ni bord -->
             <div class="lg:col-span-4 flex justify-center items-center">
                 <img src="img/logo.png" alt="Journal GenIA-L Logo" class="w-full max-w-[260px] h-auto object-contain">
             </div>
@@ -173,7 +183,6 @@
     </div>
 </section>
 
-
 <!-- SECTION GALERIE / CARROUSEL D'IMAGES INTERACTIF -->
 <section id="galerie" class="relative z-10 max-w-5xl mx-auto px-6 py-12">
     <div class="text-center max-w-2xl mx-auto mb-10">
@@ -182,37 +191,26 @@
         <p class="text-slate-600 text-sm">Naviguez à travers les visuels de l'interface et du projet.</p>
     </div>
 
-    <!-- Conteneur du Carrousel -->
     <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative">
-
-        <!-- Image Centrale en Grand -->
         <div class="relative overflow-hidden rounded-2xl bg-slate-100 flex items-center justify-center shadow-inner h-[350px] sm:h-[450px]">
             <img id="carouselImage" src="img/carousel/1.png" alt="Aperçu Journal GenIA-L" class="max-h-full max-w-full object-contain transition-all duration-300">
 
-            <!-- Bouton Flèche Gauche -->
             <button onclick="prevImage()" class="absolute left-4 bg-white/90 hover:bg-white text-indigo-950 w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-black text-xl transition transform hover:scale-105 focus:outline-none">
                 ❮
             </button>
-
-            <!-- Bouton Flèche Droite -->
             <button onclick="nextImage()" class="absolute right-4 bg-white/90 hover:bg-white text-indigo-950 w-12 h-12 rounded-full shadow-lg flex items-center justify-center font-black text-xl transition transform hover:scale-105 focus:outline-none">
                 ❯
             </button>
         </div>
 
-        <!-- Indicateur de position & Titre de l'image -->
         <div class="text-center mt-4">
             <span id="imageCounter" class="text-xs font-bold text-indigo-600 uppercase tracking-widest bg-indigo-50 px-3 py-1 rounded-full">Image 1 sur 4</span>
         </div>
 
-        <!-- Miniatures cliquables en bas -->
-        <div class="flex items-center justify-center gap-3 mt-6 overflow-x-auto pb-2" id="thumbnailContainer">
-            <!-- Les miniatures sont injectées dynamiquement par script -->
-        </div>
+        <div class="flex items-center justify-center gap-3 mt-6 overflow-x-auto pb-2" id="thumbnailContainer"></div>
     </div>
 </section>
 
-<!-- SCRIPT DU CARROUSEL -->
 <script>
     const images = [
         { src: "img/carousel/1.png", title: "Journal GenIA-L sur smartphone" },
@@ -222,14 +220,13 @@
         { src: "img/carousel/5.png", title: "Partage anonyme de préparations en communauté" },
         { src: "img/carousel/6.png", title: "Couverture du référentiel (vu / non-vu), réponses et conseils" },
         { src: "img/carousel/7.png", title: "Synchronisation entre smartphones, tablettes ..." },
-        { src: "img/carousel/8.png", title: "Votre journée  après avoir dictés les activités prévues" },
+        { src: "img/carousel/8.png", title: "Votre journée après avoir dictés les activités prévues" },
         { src: "img/carousel/9.png", title: "Compte-rendus de réunions basés sur des notes" },
         { src: "img/carousel/10.png", title: "Rapport détaillé de couverture du référentiel" },
         { src: "img/carousel/11.png", title: "Votre préparation après avoir dictés les activités prévues" }
     ];
 
     let currentIndex = 0;
-
     const carouselImage = document.getElementById("carouselImage");
     const imageCounter = document.getElementById("imageCounter");
     const thumbnailContainer = document.getElementById("thumbnailContainer");
@@ -294,7 +291,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <!-- AVANT -->
         <div class="bg-rose-50/70 p-8 rounded-3xl border-2 border-rose-200">
             <div class="inline-block bg-rose-200 text-rose-950 text-xs font-black px-3 py-1 rounded-full mb-6">❌ AVANT : LA SURCHARGE ADMINISTRATIVE</div>
             <div class="space-y-6">
@@ -309,7 +305,6 @@
             </div>
         </div>
 
-        <!-- APRÈS (MODE MIRACLE) -->
         <div class="bg-emerald-50/80 p-8 rounded-3xl border-2 border-emerald-300 shadow-xl">
             <div class="inline-block bg-emerald-300 text-emerald-950 text-xs font-black px-3 py-1 rounded-full mb-6">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
             <div class="space-y-6">
@@ -385,13 +380,12 @@
                     <a href="https://play.google.com/store/apps/details?id=com.apps.journalgenial" target="_blank" class="inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold px-7 py-3.5 rounded-2xl shadow-lg transition">
                         <span>📲</span> Google Play Store
                     </a>
-                    <a href="https://journalgenial.be/tutoriels/tuto-01-introduction.mp4" target="_blank" class="inline-flex items-center gap-2 bg-indigo-900 hover:bg-indigo-800 text-white font-bold px-6 py-3.5 rounded-2xl border border-indigo-700 shadow-md transition">
-                        <span>▶️</span> Voir la vidéo démo
+                    <a href="tutoriels.html" class="inline-flex items-center gap-2 bg-indigo-900 hover:bg-indigo-800 text-white font-bold px-6 py-3.5 rounded-2xl border border-indigo-700 shadow-md transition">
+                        <span>▶️</span> Voir les tutoriels vidéo
                     </a>
                 </div>
             </div>
 
-            <!-- CARTE QR CODE AVEC GOOGLEPLAY.PNG -->
             <div class="lg:col-span-5 flex justify-center">
                 <div class="bg-white p-6 rounded-3xl shadow-2xl text-slate-900 flex items-center gap-5 max-w-sm">
                     <img src="img/QRGooglePlay.png" alt="QR Code Téléchargement Android" class="w-28 h-28 object-contain rounded-xl border border-slate-100 shadow-inner">
@@ -423,10 +417,11 @@
                 <a href="flyer.html" target="_blank" class="hover:underline">Imprimer le flyer</a>
                 <span>•</span>
                 <a href="faq.html" class="hover:underline">FAQ</a>
+                <span>•</span>
+                <a href="tutoriels.html" class="hover:underline">Tutoriels</a>
             </div>
         </div>
     </div>
-    <!-- LIENS LÉGAUX DISCRETS EN BAS -->
     <div class="max-w-7xl mx-auto px-6 mt-6 pt-4 border-t border-slate-100 flex justify-center items-center gap-4 text-[11px] text-slate-400">
         <a href="privacy/index.html" class="hover:underline">Politique de confidentialité</a>
         <span>•</span>
