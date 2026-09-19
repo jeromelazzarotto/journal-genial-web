@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créateur de Scénario Marketing 3D — Journal GenIA-L</title>
-
-    <!-- Méta-description SEO -->
     <meta name="description" content="Générez la fiche scénario complète et les prompts de vos vidéos marketing 3D pour l'application Journal GenIA-L.">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -23,7 +20,6 @@
 <div class="blob-indigo"></div>
 <div class="blob-rose"></div>
 
-<!-- HEADER INTÉGRANT LE LOGO ET LE TITRE -->
 <header class="relative z-20 bg-indigo-950 text-white py-3 px-6 shadow-md">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
@@ -38,7 +34,6 @@
     </div>
 </header>
 
-<!-- CONTENU PRINCIPAL : FORMULAIRE DE PARAMÉTRAGE -->
 <main class="relative z-10 max-w-4xl mx-auto px-6 py-12 flex-grow w-full">
     <div class="text-center max-w-2xl mx-auto mb-10">
         <span class="bg-indigo-100 text-indigo-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Paramétrage du Clip</span>
@@ -69,8 +64,8 @@
                 </div>
 
                 <div>
-                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">2. Action initiale :</label>
-                    <textarea name="action" rows="2" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">Laura se tient au milieu du salon et attrape son smartphone.</textarea>
+                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">2. Action initiale (Image 1 — Début Plan 1) :</label>
+                    <textarea name="action" rows="2" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">Laura se tient au milieu du salon et attrape son smartphone, l'air stressé.</textarea>
                 </div>
 
                 <div>
@@ -84,12 +79,22 @@
                 </div>
 
                 <div>
-                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">5. Réplique Finale (en partant) :</label>
+                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">5. Début Plan 2 (Image 2) :</label>
+                    <textarea name="situationFin" rows="2" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">Laura apparaît totalement libérée et souriante au début du plan 2.</textarea>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">6. Fin du Plan 2 / Dernière Frame (Image 3) :</label>
+                    <textarea name="imageFin" rows="2" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">Laura s'apprête à franchir la porte d'entrée, un sac à la main, totalement souriante.</textarea>
+                </div>
+
+                <div>
+                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">7. Réplique Finale (en partant) :</label>
                     <textarea name="replique" rows="2" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">"Terminé en un éclair... Et maintenant, c'est le grand bal !"</textarea>
                 </div>
 
                 <div>
-                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">6. Slogan Final en "-al" :</label>
+                    <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">8. Slogan Final en "-al" :</label>
                     <input type="text" name="slogan" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="Et tout devient idéal avec Journal GenIA-L !">
                 </div>
 
@@ -104,7 +109,6 @@
     </div>
 </main>
 
-<!-- FOOTER -->
 <footer class="relative z-10 border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-500 mt-12">
     <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-2">
@@ -123,6 +127,8 @@
         document.querySelector('[name="action"]').value = '';
         document.querySelector('[name="probleme"]').value = '';
         document.querySelector('[name="dictee"]').value = '';
+        document.querySelector('[name="situationFin"]').value = '';
+        document.querySelector('[name="imageFin"]').value = '';
         document.querySelector('[name="replique"]').value = '';
         document.querySelector('[name="slogan"]').value = '';
     }
@@ -137,6 +143,8 @@
             action: document.querySelector('[name="action"]').value,
             probleme: document.querySelector('[name="probleme"]').value,
             dictee: document.querySelector('[name="dictee"]').value,
+            situationFin: document.querySelector('[name="situationFin"]').value,
+            imageFin: document.querySelector('[name="imageFin"]').value,
             replique: document.querySelector('[name="replique"]').value,
             slogan: document.querySelector('[name="slogan"]').value
         };
@@ -208,63 +216,57 @@
                         <tbody>
                             <tr><td class="params-label">Nom du Scénario</td><td class="params-value">${currentScenarioData.nom}</td></tr>
                             <tr><td class="params-label">1. Décor & Contexte (Lieu, ambiance)</td><td class="params-value">${currentScenarioData.decor}</td></tr>
-                            <tr><td class="params-label">2. Action initiale</td><td class="params-value">${currentScenarioData.action}</td></tr>
+                            <tr><td class="params-label">2. Action initiale (Image 1 — Début Plan 1)</td><td class="params-value">${currentScenarioData.action}</td></tr>
                             <tr><td class="params-label">3. Problème / Pensée initiale (Voix off)</td><td class="params-value">${currentScenarioData.probleme}</td></tr>
                             <tr><td class="params-label">4. Texte de la Dictée (de dos)</td><td class="params-value">${currentScenarioData.dictee}</td></tr>
-                            <tr><td class="params-label">5. Réplique Finale (en partant)</td><td class="params-value">${currentScenarioData.replique}</td></tr>
-                            <tr><td class="params-label">6. Slogan Final en "-al"</td><td class="params-value">${currentScenarioData.slogan}</td></tr>
+                            <tr><td class="params-label">5. Début Plan 2 (Image 2)</td><td class="params-value">${currentScenarioData.situationFin}</td></tr>
+                            <tr><td class="params-label">6. Fin du Plan 2 / Dernière Frame (Image 3)</td><td class="params-value">${currentScenarioData.imageFin}</td></tr>
+                            <tr><td class="params-label">7. Réplique Finale (en partant)</td><td class="params-value">${currentScenarioData.replique}</td></tr>
+                            <tr><td class="params-label">8. Slogan Final en "-al"</td><td class="params-value">${currentScenarioData.slogan}</td></tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- PAGE 2 : TRAME NARRATIVE ET TECHNIQUE -->
                 <div class="page page-break page-page2">
-                    <div class="section-title">PLAN 1 (0s à ~11s) : La Contrainte, l'Éclair et le Déclic Magique de Face</div>
+                    <div class="section-title">PLAN 1 (0s à ~11s) : La Contrainte, l'Éclair et le Déclic Magique (Image 1)</div>
+                    <div class="sub-section">
+                        <h3>Déroulement visuel et chronologique détaillé :</h3>
+                        <ul>
+                            <li><b>Décor de référence :</b> <span class="variable-ref">[1. Décor : ${currentScenarioData.decor}]</span>.</li>
+                            <li><b>0s - 5s (De face - Écoute) :</b> <span class="variable-ref">[2. Action : ${currentScenarioData.action}]</span>. Voix off : <span class="variable-ref">[3. Problème : ${currentScenarioData.probleme}]</span>. <b>Règle : Bouche fermée, ne parle jamais face caméra (on ne voit jamais sa bouche quand elle parle du fait de sa posture ou d'un élément cachant sa bouche). L'écran du GSM ne doit jamais être visible.</b></li>
+                            <li><b>5s - 6s (Impact magique) :</b> Un éclair lumineux frappe le bureau et le téléphone dans le décor <span class="variable-ref">[1. Décor : ${currentScenarioData.decor}]</span>.</li>
+                            <li><b>6s - 10s (De dos - Dictée) :</b> Elle se tourne de dos et dicte sa note : <span class="variable-ref">[4. Dictée : "${currentScenarioData.dictee}"]</span> (téléphone horizontal, jamais à l'oreille).</li>
+                            <li><b>10s - 11s (Retour face) :</b> Sourire satisfait. <b>Bouche fermée, ne parle pas.</b></li>
+                        </ul>
+                    </div>
+
+                    <div class="section-title">PLAN 2 (~11s à ~22s) : La Délivrance et Fin de Scène (Images 2 et 3)</div>
                     <div class="sub-section">
                         <h3>Déroulement visuel et narratif détaillé :</h3>
                         <ul>
-                            <li><b>Mise en place du décor :</b> L'action se déroule dans le lieu défini par le paramètre <span class="variable-ref">[1. Décor & Contexte : ${currentScenarioData.decor}]</span>.</li>
-                            <li><b>Situation initiale (De face) :</b> Laura exécute <span class="variable-ref">[2. Action initiale : ${currentScenarioData.action}]</span>. Sa tension émotionnelle est transmise par ses expressions et le <span class="variable-ref">[3. Problème : ${currentScenarioData.probleme}]</span> en voix off (bouche fermée/neutre).</li>
-                            <li><b>Prise en main du GSM :</b> Elle attrape son smartphone au milieu de cette action pour chercher de l'aide.</li>
-                            <li><b>L'Éclair d'inspiration (De face) :</b> Au moment où elle regarde l'écran, un <b>éclair lumineux magique frappe le GSM</b>.</li>
-                            <li><b>Transformation instantanée :</b> Son visage s'illumine instantanément ; elle bascule vers une joie enjouée et confiante.</li>
-                            <li><b>Le Tournant de dos (Le Rituel) :</b> Dans cet élan, elle <b>effectue un pivot fluide et se tourne entièrement de dos</b> face à la caméra.</li>
-                            <li><b>L'action éclair (1 seconde) :</b> Toujours positionnée de dos, elle dicte vocalement <span class="variable-ref">[4. Dictée : ${currentScenarioData.dictee}]</span> pendant 1 seconde tout en effectuant deux clics nets sur son écran.</li>
-                            <li><b>Le Retour de face :</b> Elle se retourne immédiatement de face, pleine de peps.</li>
+                            <li><b>Début du plan (Image 2) :</b> <span class="variable-ref">[5. Situation de fin : ${currentScenarioData.situationFin}]</span>.</li>
+                            <li><b>Action et déplacement :</b> Elle s'élance en prononçant la réplique : <span class="variable-ref">[7. Réplique : "${currentScenarioData.replique}"]</span>. (Si elle parle face caméra, on ne voit jamais sa bouche grâce à sa posture ou un élément la cachant).</li>
+                            <li><b>Fin du plan / Dernière frame (Image 3) :</b> <span class="variable-ref">[6. Image de fin : ${currentScenarioData.imageFin}]</span>. C'est la pose finale exacte sur laquelle la vidéo doit se figer/conclure.</li>
                         </ul>
-                        <p style="margin-top: 4px; margin-bottom: 0px; color: #4A5568;"><b>Audio :</b> Voix off de tension ➔ Jingle d'éclair magique ➔ Bascule sur la musique orchestrale épique.</p>
                     </div>
 
-                    <div class="section-title">PLAN 2 (~11s à ~22s) : La Délivrance et le Départ en Trombe</div>
-                    <div class="sub-section">
-                        <h3>Déroulement visuel et narratif détaillé :</h3>
-                        <ul>
-                            <li><b>De retour face caméra :</b> Laura apparaît totalement libérée et rayonnante grâce à l'application.</li>
-                            <li><b>L'action multitâches fluide :</b> Elle finalise ses affaires d'un geste assuré et dynamique.</li>
-                            <li><b>La Sortie triomphante :</b> Elle s'élance d'un pas décidé vers la sortie, tout en prononçant face caméra la réplique <span class="variable-ref">[5. Réplique : ${currentScenarioData.replique}]</span>.</li>
-                        </ul>
-                        <p style="margin-top: 4px; margin-bottom: 0px; color: #4A5568;"><b>Audio :</b> Continuation de la musique orchestrale épique + Voix de Laura enjouée en marchant.</p>
-                    </div>
-
-                    <div class="section-title">OUTRO / PACKSHOT FINAL (~22s à ~26s) : La Signature de Marque</div>
+                    <div class="section-title">OUTRO / PACKSHOT FINAL (~22s à ~26s) : Signature de Marque</div>
                     <div class="sub-section">
                         <h3>Déroulement visuel et narratif :</h3>
-                        <ul style="margin-bottom: 0;">
-                            <li><b>Visuel :</b> Transition franche vers l'écran de fin graphique aux couleurs de la marque avec l'apparition animée du logo.</li>
-                            <li><b>Audio Fixe :</b> Voix off de fin percutante assénant le slogan <span class="variable-ref">[6. Slogan : ${currentScenarioData.slogan}]</span>.</li>
+                        <ul>
+                            <li><b>Audio Fixe :</b> Voix off de fin percutante assénant le slogan : <span class="variable-ref">[8. Slogan : "${currentScenarioData.slogan}"]</span>.</li>
                         </ul>
                     </div>
 
                     <div class="baseline-box">
-                        <h4>BASELINE TECHNIQUE OBLIGATOIRE (À inclure systématiquement pour guider l'IA) :</h4>
+                        <h4>BASELINE TECHNIQUE OBLIGATOIRE :</h4>
                         <ul>
-                            <li><b>Personnage (Persistance de Laura) :</b> 3D animated character of Laura, messy updo bun, expressive green-blue eyes, freckles, wearing a beige knit cardigan over her outfit. Pixar style, consistent facial features and proportions across all video clips.</li>
-                            <li><b>Styles de Prompts Vidéo (Kling AI) :</b> High quality 3D character animation, smooth fluid movement, cinematic lighting, 8k resolution, detailed micro-expressions.</li>
-                            <li><b>Effets Sonores et Pistes Audio Fixes :</b> Jingle d'éclair magique à l'impact sur le GSM, déclenchement brutal d'une musique orchestrale épique de super-héros, double effet sonore de clic, jingle final de marque.</li>
+                            <li><b>Personnage :</b> 3D animated character of Laura, messy updo bun, expressive green-blue eyes, freckles, beige knit cardigan. Pixar style. <b>On ne voit jamais sa bouche quand elle parle (du fait de sa posture ou d'un élément cachant sa bouche).</b></li>
+                            <li><b>Styles de Prompts Vidéo :</b> High quality 3D character animation, smooth fluid movement, cinematic lighting, 8k resolution. The phone screen must never be visible.</li>
                         </ul>
                     </div>
 
-                    <!-- BOUTONS EN BAS DE LA FICHE -->
                     <div class="ai-action-container">
                         <h3 style="margin-top:0; color:#2B6CB0; font-size:11pt;">Options de production pour ce scénario</h3>
                         <p style="font-size:9.5pt; color:#4A5568; margin-bottom:15px;">Générez les prompts directement ou préparez un e-mail pour l'équipe support / marketing.</p>
@@ -285,7 +287,7 @@
 
     function sendScenarioEmail() {
         navigator.clipboard.writeText(lastGeneratedSheetHtml).then(() => {
-            alert("📋 Fiche scénario copiée dans le presse-papier !\n\nFaites un simple Ctrl+V (ou Cmd+V) dans le corps du message pour y coller la fiche complète.");
+            alert("📋 Fiche scénario copiée dans le presse-papier !\n\nFaites Ctrl+V dans votre e-mail pour y coller la fiche complète.");
             const subject = encodeURIComponent("[Marketing Scénario] " + (currentScenarioData.nom || 'Sans nom'));
             const body = encodeURIComponent("Bonjour l'équipe,\n\nVoici la fiche scénario marketing 3D (le code HTML est prêt à être collé ci-dessous avec Ctrl+V) :\n\n[COLLEZ LE CODE HTML ICI]");
             window.location.href = `mailto:support@journalgenial.be?subject=${subject}&body=${body}`;
@@ -310,11 +312,13 @@
                     <tbody>
                         <tr><td>Nom du Scénario :</td><td>${currentScenarioData.nom}</td></tr>
                         <tr><td>1. Décor & Contexte :</td><td>${currentScenarioData.decor}</td></tr>
-                        <tr><td>2. Action initiale :</td><td>${currentScenarioData.action}</td></tr>
+                        <tr><td>2. Action initiale (Image 1) :</td><td>${currentScenarioData.action}</td></tr>
                         <tr><td>3. Problème / Pensée initiale :</td><td>${currentScenarioData.probleme}</td></tr>
                         <tr><td>4. Texte de la Dictée :</td><td>${currentScenarioData.dictee}</td></tr>
-                        <tr><td>5. Réplique Finale :</td><td>${currentScenarioData.replique}</td></tr>
-                        <tr><td>6. Slogan Final en "-al" :</td><td>${currentScenarioData.slogan}</td></tr>
+                        <tr><td>5. Début Plan 2 (Image 2) :</td><td>${currentScenarioData.situationFin}</td></tr>
+                        <tr><td>6. Fin du Plan 2 / Dernière Frame (Image 3) :</td><td>${currentScenarioData.imageFin}</td></tr>
+                        <tr><td>7. Réplique Finale :</td><td>${currentScenarioData.replique}</td></tr>
+                        <tr><td>8. Slogan Final en "-al" :</td><td>${currentScenarioData.slogan}</td></tr>
                     </tbody>
                 </table>
             </body>
