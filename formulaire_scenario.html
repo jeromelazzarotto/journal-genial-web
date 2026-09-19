@@ -50,10 +50,12 @@
         <form id="scenarioForm" onsubmit="event.preventDefault(); showScenarioSheet();">
             <div class="space-y-6">
 
-                <div class="grid sm:grid-cols-2 gap-6">
+                <div class="grid sm:grid-cols-2 gap-6 items-end">
                     <div>
-                        <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">Code du Scénario :</label>
-                        <input type="text" name="code" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="SCENARIO_01_DIMANCHE">
+                        <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">Action rapide :</label>
+                        <button type="button" onclick="clearForm()" class="w-full p-3 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 rounded-xl font-bold text-sm transition flex items-center justify-center gap-2">
+                            <span>🗑️</span> Vider le formulaire
+                        </button>
                     </div>
                     <div>
                         <label class="block font-bold text-xs text-indigo-950 uppercase tracking-wider mb-2">Nom du Scénario :</label>
@@ -115,12 +117,22 @@
 </footer>
 
 <script>
+    // Fonction pour vider l'ensemble des champs du formulaire
+    function clearForm() {
+        document.querySelector('[name="nom"]').value = '';
+        document.querySelector('[name="decor"]').value = '';
+        document.querySelector('[name="action"]').value = '';
+        document.querySelector('[name="probleme"]').value = '';
+        document.querySelector('[name="dictee"]').value = '';
+        document.querySelector('[name="replique"]').value = '';
+        document.querySelector('[name="slogan"]').value = '';
+    }
+
     // Variables globales stockant les données du formulaire pour les réutiliser lors de l'appel API
     let currentScenarioData = {};
 
     function showScenarioSheet() {
         currentScenarioData = {
-            code: document.querySelector('[name="code"]').value,
             nom: document.querySelector('[name="nom"]').value,
             decor: document.querySelector('[name="decor"]').value,
             action: document.querySelector('[name="action"]').value,
@@ -136,7 +148,7 @@
             <html lang="fr">
             <head>
                 <meta charset="UTF-8">
-                <title>${currentScenarioData.code} - Fiche Scénario Marketing 3D</title>
+                <title>${currentScenarioData.nom || 'Fiche Scénario Marketing 3D'}</title>
                 <style>
                     @page { size: A4 portrait; margin: 10mm; }
                     body {
@@ -193,7 +205,6 @@
                     <h1 class="title">Fiche Scénario Marketing 3D<br><span style="font-size: 12pt; color: #4A5568;">Journal GenIA-L</span></h1>
                     <table class="params-table">
                         <tbody>
-                            <tr><td class="params-label">Code du Scénario</td><td class="params-value">${currentScenarioData.code}</td></tr>
                             <tr><td class="params-label">Nom du Scénario</td><td class="params-value">${currentScenarioData.nom}</td></tr>
                             <tr><td class="params-label">1. Décor & Contexte (Lieu, ambiance)</td><td class="params-value">${currentScenarioData.decor}</td></tr>
                             <tr><td class="params-label">2. Action initiale</td><td class="params-value">${currentScenarioData.action}</td></tr>
@@ -273,15 +284,14 @@
         btn.disabled = true;
         btn.innerText = "⏳ Génération des prompts en cours...";
 
-        // Construction du payload HTML exact attendu par l'API /generatescenario
+        // Construction du payload HTML exact attendu par l'API /generatescenario (sans code)
         const generatedHtmlPayload = `
             <!DOCTYPE html>
             <html lang="fr">
-            <head><meta charset="UTF-8"><title>${currentScenarioData.code}</title></head>
+            <head><meta charset="UTF-8"><title>${currentScenarioData.nom}</title></head>
             <body>
                 <table>
                     <tbody>
-                        <tr><td>Code du Scénario :</td><td>${currentScenarioData.code}</td></tr>
                         <tr><td>Nom du Scénario :</td><td>${currentScenarioData.nom}</td></tr>
                         <tr><td>1. Décor & Contexte :</td><td>${currentScenarioData.decor}</td></tr>
                         <tr><td>2. Action initiale :</td><td>${currentScenarioData.action}</td></tr>
