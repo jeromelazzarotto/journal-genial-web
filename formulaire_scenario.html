@@ -117,7 +117,6 @@
 </footer>
 
 <script>
-    // Fonction pour vider l'ensemble des champs du formulaire
     function clearForm() {
         document.querySelector('[name="nom"]').value = '';
         document.querySelector('[name="decor"]').value = '';
@@ -128,8 +127,8 @@
         document.querySelector('[name="slogan"]').value = '';
     }
 
-    // Variables globales stockant les données du formulaire pour les réutiliser lors de l'appel API
     let currentScenarioData = {};
+    let lastGeneratedSheetHtml = '';
 
     function showScenarioSheet() {
         currentScenarioData = {
@@ -142,8 +141,7 @@
             slogan: document.querySelector('[name="slogan"]').value
         };
 
-        // Génération de la fiche HTML complète basée sur le template universel avec le bouton de génération IA en bas
-        const scenarioSheetHtml = `
+        lastGeneratedSheetHtml = `
             <!DOCTYPE html>
             <html lang="fr">
             <head>
@@ -192,7 +190,10 @@
                     .nav-btn:hover { background-color: #2D3748; }
                     .ai-btn { background-color: #D69E2E; color: #1A365D; }
                     .ai-btn:hover { background-color: #B7791F; }
-                    .ai-action-container { text-align: center; margin-top: 30px; margin-bottom: 20px; padding: 20px; background: #EBF8FF; border-radius: 8px; border: 1px dashed #3182CE; }
+                    .mail-btn { background-color: #3182CE; color: white; }
+                    .mail-btn:hover { background-color: #2B6CB0; }
+                    .ai-action-container { text-align: center; margin-top: 30px; margin-bottom: 20px; padding: 20px; background: #EBF8FF; border-radius: 8px; border: 1px dashed #3182CE; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+                    .btn-group { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
                 </style>
             </head>
             <body>
@@ -263,11 +264,14 @@
                         </ul>
                     </div>
 
-                    <!-- BOUTON EN BAS DE LA FICHE POUR APPELER L'API ET GÉNÉRER LES PROMPTS -->
+                    <!-- BOUTONS EN BAS DE LA FICHE -->
                     <div class="ai-action-container">
-                        <h3 style="margin-top:0; color:#2B6CB0; font-size:11pt;">Prêt à industrialiser la production ?</h3>
-                        <p style="font-size:9.5pt; color:#4A5568; margin-bottom:15px;">Envoyez cette fiche scénario à l'API pour obtenir immédiatement les prompts de production optimisés.</p>
-                        <button type="button" id="apiBtn" class="nav-btn ai-btn" onclick="generateAiPrompts()">✨ Générer les prompts IA</button>
+                        <h3 style="margin-top:0; color:#2B6CB0; font-size:11pt;">Options de production pour ce scénario</h3>
+                        <p style="font-size:9.5pt; color:#4A5568; margin-bottom:15px;">Générez les prompts directement ou préparez un e-mail pour l'équipe support / marketing.</p>
+                        <div class="btn-group">
+                            <button type="button" id="apiBtn" class="nav-btn ai-btn" onclick="generateAiPrompts()">✨ Générer les prompts IA</button>
+                            <button type="button" class="nav-btn mail-btn" onclick="sendScenarioEmail()">📧 Préparer un e-mail</button>
+                        </div>
                     </div>
                 </div>
             </body>
@@ -275,8 +279,21 @@
         `;
 
         document.open();
-        document.write(scenarioSheetHtml);
+        document.write(lastGeneratedSheetHtml);
         document.close();
+    }
+
+    function sendScenarioEmail() {
+        navigator.clipboard.writeText(lastGeneratedSheetHtml).then(() => {
+            alert("📋 Fiche scénario copiée dans le presse-papier !\n\nFaites un simple Ctrl+V (ou Cmd+V) dans le corps du message pour y coller la fiche complète.");
+            const subject = encodeURIComponent("[Marketing Scénario] " + (currentScenarioData.nom || 'Sans nom'));
+            const body = encodeURIComponent("Bonjour l'équipe,\n\nVoici la fiche scénario marketing 3D (le code HTML est prêt à être collé ci-dessous avec Ctrl+V) :\n\n[COLLEZ LE CODE HTML ICI]");
+            window.location.href = `mailto:support@journalgenial.be?subject=${subject}&body=${body}`;
+        }).catch(err => {
+            const subject = encodeURIComponent("[Marketing Scénario] " + (currentScenarioData.nom || 'Sans nom'));
+            const body = encodeURIComponent("Bonjour l'équipe,\n\nVoici le contenu de la fiche :\n" + lastGeneratedSheetHtml);
+            window.location.href = `mailto:support@journalgenial.be?subject=${subject}&body=${body}`;
+        });
     }
 
     function generateAiPrompts() {
@@ -284,7 +301,6 @@
         btn.disabled = true;
         btn.innerText = "⏳ Génération des prompts en cours...";
 
-        // Construction du payload HTML exact attendu par l'API /generatescenario (sans code)
         const generatedHtmlPayload = `
             <!DOCTYPE html>
             <html lang="fr">
@@ -305,7 +321,6 @@
             </html>
         `;
 
-        // Appel POST vers l'API de production
         fetch('https://api.journalgenial.be/generatescenario', {
             method: 'POST',
             headers: { 'Content-Type': 'text/html; charset=utf-8' },
@@ -316,7 +331,6 @@
             return response.text();
         })
         .then(htmlResult => {
-            // Remplace la page actuelle par le tableau des 6 prompts générés retourné par l'API
             document.open();
             document.write(htmlResult);
             document.close();
