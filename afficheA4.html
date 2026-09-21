@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal GenIA-L - Flyer A4 Portrait</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+
+        /* Conteneur unique A4 Portrait sans espace perdu */
+        .flyer-container {
+            width: 210mm;
+            height: 297mm;
+            padding: 8mm 12mm 10mm 12mm;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            background-color: #FAF8F5;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<!-- CONTENEUR GLOBAL A4 PORTRAIT -->
+<div class="flyer-container">
+
+    <!-- En-tête -->
+    <div class="flex items-center justify-between">
+        <div class="bg-white px-4 py-2 rounded-xl border border-slate-200 shadow-sm flex items-center">
+            <img src="img/brand.png" alt="Journal GenIA-L" class="h-7 object-contain">
+        </div>
+        <span class="bg-amber-400 text-indigo-950 text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-wider">ENSEIGNEMENT MATERNEL FWB</span>
+    </div>
+
+    <!-- Contenu centralisé optimisé -->
+    <div class="flex flex-col items-center w-full space-y-3">
+        
+        <!-- Titre principal -->
+        <div class="text-center w-full mt-1">
+            <h1 class="text-[36px] font-black text-slate-900 tracking-tight leading-tight m-0">
+                Simplifiez votre quotidien,<br>
+                <span class="bg-gradient-to-r from-amber-500 via-orange-500 to-indigo-600 bg-clip-text text-transparent">gardez vos soirées.</span>
+            </h1>
+        </div>
+
+        <!-- Bannière visuelle en pleine largeur et généreuse en hauteur -->
+        <div class="w-full rounded-2xl overflow-hidden shadow-md">
+            <img src="img/banner.png" alt="Aperçu application" class="w-full h-auto max-h-[82mm] object-cover block">
+        </div>
+
+        <!-- SECTION AVANT / APRÈS (MODE MIRACLE) -->
+        <section id="miracle" class="relative z-10 w-full">
+            <div class="text-center mb-1.5">
+                <h2 class="text-xs font-black text-slate-900 mt-0 mb-0.5">La vie en "Mode Miracle" pour l'enseignant de maternelle</h2>
+                <p class="text-slate-600 text-[10px]">Découvrez des exemples concrets de situations vécues avant et après l'adoption de Journal GenIA-L.</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5 text-left">
+                <!-- AVANT -->
+                <div class="bg-rose-50/70 p-2.5 rounded-xl border border-rose-200">
+                    <div class="inline-block bg-rose-200 text-rose-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1">❌ AVANT : SURCHARGE ADMINISTRATIVE</div>
+                    <div class="space-y-1">
+                        <div class="border-b border-rose-200/80 pb-1">
+                            <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">Après ma journée d'école :</p>
+                            <p class="text-[10px] text-slate-700 italic leading-snug">"Des post-its plein les poches et des idées plein la tête, mais il me manque le courage de rédiger mon journal et mes rapports d'élèves."</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-rose-900 text-[10px] uppercase tracking-wider mb-0.5">Dimanche 19h00 :</p>
+                            <p class="text-[10px] text-slate-700 italic leading-snug">"J'ai passé mon dimanche à recopier mes prépas et à chercher les codes du Référentiel, je suis démotivé.e."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- APRÈS (MODE MIRACLE) -->
+                <div class="bg-emerald-50/80 p-2.5 rounded-xl border border-emerald-300 shadow-sm">
+                    <div class="inline-block bg-emerald-300 text-emerald-950 text-[9px] font-black px-2 py-0.5 rounded-full mb-1">✨ APRÈS : LE MODE MIRACLE ENCLENCHÉ</div>
+                    <div class="space-y-1">
+                        <div class="border-b border-emerald-200 pb-1">
+                            <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Vendredi à 17h00 :</p>
+                            <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Miracle ! Ma semaine complète est prête, structurée et classée. Mon week-end m'appartient enfin."</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-emerald-950 text-[10px] uppercase tracking-wider mb-0.5">Une sortie improvisée ? Pas de problème !</p>
+                            <p class="text-[10px] text-slate-800 font-medium italic leading-snug">"Je dicte deux préparations et le contenu prévu. En 12 minutes, j'ai les documents prêts avec tous les codes FWB intégrés !"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENCART : Pourquoi Journal GenIA-L ? -->
+        <div class="w-full bg-white p-3 rounded-xl border border-amber-200/80 shadow-sm text-left">
+            <p class="text-[10px] text-slate-700 leading-relaxed mb-1">
+                On trouve de quoi créer du contenu ou du matériel pédagogique ; les écoles peuvent avoir des outils de communication ou de gestion de classes, de bulletins, des réunions de parents ; et il existe des préparations, des cahiers ou des outils digitaux classiques, mais <strong class="text-slate-900 font-bold">rien de tout cela ne fait gagner du temps pour les tâches administratives personnelles de l'enseignant</strong>. L'enseignement maternel  a ses spécificités rarement prises en compte.
+            </p>
+            <p class="text-[10px] text-slate-800 leading-relaxed m-0">
+                <strong class="text-indigo-950 font-black">Journal GenIA-L</strong> est un assistant personnel numérique spécifique, sur smartphone (et tablette) Android, qui permet de dicter ses journées, ses préparations ou ses observations sur les élèves, ainsi que toute modification souhaitée sur le rendu. L’application structure et met en forme les documents, établit les relations avec le Référentiel des compétences FWB, et suggère des idées et améliorations, rend visible la progression sur le référentiel, et permet l’impression ou l’export en PDF (journalier, semainier, préparations, évaluations, compte-rendu de concertations, etc.). <strong class="text-amber-600 font-bold">Mais avant tout, elle accélère et assiste véritablement notre quotidien, elle remotive, déculpabilise et libère nos soirées !</strong>
+            </p>
+        </div>
+
+        <!-- NOUVEL ENCART : Simplicité, IA intelligente & Confidentialité (3 colonnes) -->
+        <div class="w-full bg-white p-2.5 rounded-xl border border-indigo-200/80 shadow-sm text-left">
+            <div class="grid grid-cols-3 gap-2 text-[9.5px] text-slate-700 leading-snug">
+                <div>
+                    <strong class="text-indigo-950 font-bold block mb-0.5">💡 Zéro technique & Guidé</strong>
+                    Application très ergonomique avec tutoriels vidéos. Prise en main immédiate et intuitive pour tous.
+                </div>
+                <div>
+                    <strong class="text-indigo-950 font-bold block mb-0.5">🤖 IA : Intelligemment Assisté.e </strong>
+                    L'IA conseille et structure, rédige plus vite que vous, mais n'exécute que selon vos instructions. L'enseignant reste seul maître de ses documents.
+                </div>
+                <div>
+                    <strong class="text-indigo-950 font-bold block mb-0.5">🔒 Confidentialité totale</strong>
+                    Données strictement privées (sur appareil et Google Drive personnel). Offre de lancement, essai gratuit et première semaine résiliable sans frais !
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Boîte bleue du bas adaptée au format portrait -->
+    <div class="bg-indigo-950 text-white p-3 rounded-xl grid grid-cols-2 gap-4 shadow-lg items-center">
+        <!-- QR Code Gauche (Site Web) -->
+        <div class="flex items-center gap-3 pr-2">
+            <img src="img/QRwebsite.png" alt="QR Code Site" class="w-[70px] h-[70px] p-1 bg-white rounded-lg flex-shrink-0 object-contain">
+            <div class="text-left overflow-hidden">
+                <span class="bg-amber-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">Site Officiel</span>
+                <p class="text-[11px] font-bold text-white mt-0.5">Visitez www.journalgenial.be</p>
+            </div>
+        </div>
+
+        <!-- QR Code Droite (Démo Vidéo) -->
+        <div class="flex items-center justify-end gap-3 border-l border-indigo-800 pl-4">
+            <div class="text-right overflow-hidden">
+                <span class="bg-emerald-400 text-indigo-950 text-[8px] font-black px-1.5 py-0.5 rounded uppercase">En action</span>
+                <p class="text-[11px] font-bold text-white mt-0.5">Démonstration en vidéo</p>
+            </div>
+            <img src="img/QRvideo.png" alt="QR Code Vidéo" class="w-[70px] h-[70px] p-1 bg-white rounded-lg flex-shrink-0 object-contain">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
