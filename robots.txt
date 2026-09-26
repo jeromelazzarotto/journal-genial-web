@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Indiquez l'emplacement exact de votre sitemap pour aider les robots
+Sitemap: https://www.journalgenial.be/sitemap.xml
